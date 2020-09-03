@@ -41,10 +41,21 @@
         [[NSUserDefaults standardUserDefaults] setObject:[[NSNumber alloc] initWithBool:NO] forKey:@"isLogin"];
         [[NSUserDefaults standardUserDefaults] synchronize];
     }
-    UIView *statusBar = [[[UIApplication sharedApplication] valueForKey:@"statusBarWindow"] valueForKey:@"statusBar"];
     
-    if ([statusBar respondsToSelector:@selector(setBackgroundColor:)]) {
+    if (@available(iOS 13, *)){
+//        let keyWindow = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
+        UIView *statusBar = [[UIView alloc]initWithFrame:[UIApplication sharedApplication].keyWindow.windowScene.statusBarManager.statusBarFrame] ;
         statusBar.backgroundColor = [UIColor colorWithRed:8/255.0 green:16/255.0 blue:123/255.0 alpha:1.0];
+        [[UIApplication sharedApplication].keyWindow addSubview:statusBar];
+
+
+    }else{
+
+        UIView *statusBar = [[[UIApplication sharedApplication] valueForKey:@"statusBarWindow"] valueForKey:@"statusBar"];
+        
+        if ([statusBar respondsToSelector:@selector(setBackgroundColor:)]) {
+            statusBar.backgroundColor = [UIColor colorWithRed:8/255.0 green:16/255.0 blue:123/255.0 alpha:1.0];
+        }
     }
     
 //    [[UIApplication sharedApplication] setsta:UIStatusBarStyleLightContent];

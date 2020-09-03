@@ -8,6 +8,7 @@ target 'OlympusCVM' do
   # Pods for OlympusCVM
 pod 'Firebase/Core'
 pod 'Firebase/Messaging'
+pod "youtube-ios-player-helper"
 
   target 'OlympusCVMTests' do
     inherit! :search_paths

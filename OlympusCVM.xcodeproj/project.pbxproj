@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1829BA0024FF669000FE7885 /* pdf.png in Resources */ = {isa = PBXBuildFile; fileRef = 1829B9FF24FF669000FE7885 /* pdf.png */; };
+		1829BA0224FF672100FE7885 /* avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 1829BA0124FF672100FE7885 /* avatar.png */; };
+		1879077524FFA447006CF980 /* UIViewController+Presentation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1879077424FFA447006CF980 /* UIViewController+Presentation.m */; };
+		1879077824FFAC78006CF980 /* VideoListingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1879077724FFAC78006CF980 /* VideoListingViewController.m */; };
+		1879077B2500F034006CF980 /* YoutubePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1879077A2500F034006CF980 /* YoutubePlayerViewController.m */; };
 		46130BA2E56619D3B9B0A40A /* libPods-OlympusCVMUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E6E767B054363B34C511A6 /* libPods-OlympusCVMUITests.a */; };
 		4B0AA5FC21D616640048749E /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B0AA5FB21D616610048749E /* user.png */; };
 		4B0AA60021D645360048749E /* list.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B0AA5FF21D645320048749E /* list.png */; };
@@ -108,7 +113,6 @@
 		4B508A5D21E34D95008F4FBC /* pdf_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B508A5C21E34D95008F4FBC /* pdf_icon.png */; };
 		4B547C58209C76D400466DDE /* background_final.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B547C57209C76D300466DDE /* background_final.png */; };
 		4B58D12D207F5C0F00FF5657 /* HospitalsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B58D12C207F5C0F00FF5657 /* HospitalsViewController.m */; };
-		4B5953E221CBB8A300FB5580 /* pdf.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B5953E121CBB8A200FB5580 /* pdf.png */; };
 		4B5BB2EA20383CBC00DDA6C7 /* MainTabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5BB2E920383CBC00DDA6C7 /* MainTabbarViewController.m */; };
 		4B5BC48421CB755900DA36B9 /* InboxDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5BC48321CB755900DA36B9 /* InboxDetailViewController.m */; };
 		4B5CC8A02041E30700712014 /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5CC89F2041E30700712014 /* HistoryViewController.m */; };
@@ -124,7 +128,6 @@
 		4B72D01D22A791780088FBD8 /* y4.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B72D01B22A791760088FBD8 /* y4.png */; };
 		4B72D02022A791C50088FBD8 /* installation_req_w.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B72D01E22A791C20088FBD8 /* installation_req_w.png */; };
 		4B72D02122A791C50088FBD8 /* installation_req_y.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B72D01F22A791C40088FBD8 /* installation_req_y.png */; };
-		4B72D02322A79ED00088FBD8 /* avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B72D02222A79ED00088FBD8 /* avatar.png */; };
 		4B72D02522A7A16C0088FBD8 /* hospital.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B72D02422A7A16A0088FBD8 /* hospital.png */; };
 		4B73AE4F22168137004A1CEE /* profiles.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B73AE4E22168137004A1CEE /* profiles.png */; };
 		4B758EB8221BEE5300F5F1CB /* check_mark.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B758EB7221BEE5300F5F1CB /* check_mark.png */; };
@@ -304,6 +307,14 @@
 		0E1A6611964995D9AFE4FBB9 /* Pods-OlympusCVMUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OlympusCVMUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OlympusCVMUITests/Pods-OlympusCVMUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		13E1CBDF155D48D8C3B844B6 /* Pods-OlympusCVMTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OlympusCVMTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OlympusCVMTests/Pods-OlympusCVMTests.debug.xcconfig"; sourceTree = "<group>"; };
 		15E6E767B054363B34C511A6 /* libPods-OlympusCVMUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OlympusCVMUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1829B9FF24FF669000FE7885 /* pdf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pdf.png; sourceTree = "<group>"; };
+		1829BA0124FF672100FE7885 /* avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatar.png; sourceTree = "<group>"; };
+		1879077324FFA446006CF980 /* UIViewController+Presentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Presentation.h"; sourceTree = "<group>"; };
+		1879077424FFA447006CF980 /* UIViewController+Presentation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Presentation.m"; sourceTree = "<group>"; };
+		1879077624FFAC78006CF980 /* VideoListingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoListingViewController.h; sourceTree = "<group>"; };
+		1879077724FFAC78006CF980 /* VideoListingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoListingViewController.m; sourceTree = "<group>"; };
+		187907792500F034006CF980 /* YoutubePlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YoutubePlayerViewController.h; sourceTree = "<group>"; };
+		1879077A2500F034006CF980 /* YoutubePlayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YoutubePlayerViewController.m; sourceTree = "<group>"; };
 		266142F7362963860AE35A84 /* libPods-OlympusCVM.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OlympusCVM.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F9E361F86F2B00DBA72E4E8 /* Pods-OlympusCVMTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OlympusCVMTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OlympusCVMTests/Pods-OlympusCVMTests.release.xcconfig"; sourceTree = "<group>"; };
 		4B0AA5FB21D616610048749E /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
@@ -865,6 +876,8 @@
 		4B83A4491FE98CA200E887E9 /* OlympusCVM */ = {
 			isa = PBXGroup;
 			children = (
+				1829BA0124FF672100FE7885 /* avatar.png */,
+				1829B9FF24FF669000FE7885 /* pdf.png */,
 				4B13D65422CD169F00E74311 /* image1.jpg */,
 				4B13D65622CD16EB00E74311 /* image2.jpg */,
 				4B13D65822CD174A00E74311 /* image3.jpg */,
@@ -880,6 +893,8 @@
 				4B78649122CF19400071F080 /* down_arrow.png */,
 				4BD0228522C0AA7C004CC165 /* P5030371.jpg */,
 				4BD0228722C0AB31004CC165 /* academic_banner.jpg */,
+				1879077324FFA446006CF980 /* UIViewController+Presentation.h */,
+				1879077424FFA447006CF980 /* UIViewController+Presentation.m */,
 				4B8A837B20C682AF0000CFEF /* OlympusCVM.entitlements */,
 				4B3212C721CAD0CD0013A31F /* SDWebImage */,
 				4B1E062820B2AA0E0027F6FE /* AFNetworking */,
@@ -913,6 +928,10 @@
 				4BF6B5E72085D53500DE934C /* TermsofUseViewController.m */,
 				4B83A4501FE98CA200E887E9 /* ViewController.h */,
 				4B83A4511FE98CA200E887E9 /* ViewController.m */,
+				1879077624FFAC78006CF980 /* VideoListingViewController.h */,
+				1879077724FFAC78006CF980 /* VideoListingViewController.m */,
+				187907792500F034006CF980 /* YoutubePlayerViewController.h */,
+				1879077A2500F034006CF980 /* YoutubePlayerViewController.m */,
 				4B83A4861FEA288100E887E9 /* LoginViewController.h */,
 				4B83A4871FEA288100E887E9 /* LoginViewController.m */,
 				4BDE8EAC20C251A3004200F3 /* ForgetPassViewController.h */,
@@ -1240,6 +1259,7 @@
 				4B83A4431FE98CA100E887E9 /* Sources */,
 				4B83A4441FE98CA100E887E9 /* Frameworks */,
 				4B83A4451FE98CA100E887E9 /* Resources */,
+				C87B9785FD8DB81878F12169 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1329,6 +1349,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -1434,7 +1455,6 @@
 				4BF6B62720876EA800DE934C /* frame_17_delay-0.1s.gif in Resources */,
 				4B5CC8A22041EF4E00712014 /* unselected_no_border.png in Resources */,
 				4B13D65922CD174E00E74311 /* image3.jpg in Resources */,
-				4B5953E221CBB8A300FB5580 /* pdf.png in Resources */,
 				4BDE8EAB20C153A6004200F3 /* existing_req_w.png in Resources */,
 				4BDE8E9920BFBE6F004200F3 /* MyriadPro-Semibold.otf in Resources */,
 				4B7DB5122091EE8100532D53 /* option_history_selected3.png in Resources */,
@@ -1461,7 +1481,6 @@
 				4B8F08C22096247A000DB2FA /* status_g.png in Resources */,
 				4BDE8E8420BC6363004200F3 /* edit.png in Resources */,
 				4B83A4AA1FEA520400E887E9 /* Roboto-Italic.ttf in Resources */,
-				4B72D02322A79ED00088FBD8 /* avatar.png in Resources */,
 				4BB922F420A2C9BE00E95CD9 /* logout.png in Resources */,
 				4B758EB8221BEE5300F5F1CB /* check_mark.png in Resources */,
 				4B1785D42044631B0007E21A /* down-arrow.png in Resources */,
@@ -1492,6 +1511,7 @@
 				4BF6B61C20876EA800DE934C /* frame_06_delay-0.1s.gif in Resources */,
 				4B13D65F22CD1F5B00E74311 /* image7.jpg in Resources */,
 				4BD6AB1F206A2D2900E6F01D /* iphone_launchImg.png in Resources */,
+				1829BA0224FF672100FE7885 /* avatar.png in Resources */,
 				4B3CE6DA20C54263001B72B0 /* unselect_star.png in Resources */,
 				4B13D65D22CD1F4A00E74311 /* image6.jpg in Resources */,
 				4B0AFAFE208DDD01007FFF17 /* w2.png in Resources */,
@@ -1519,6 +1539,7 @@
 				4B43C996208EFB6100F8C235 /* EncodeSansNormal-300-Light.ttf in Resources */,
 				4BF6B62820876EA800DE934C /* frame_18_delay-0.1s.gif in Resources */,
 				4BF6B61A20876EA800DE934C /* frame_04_delay-0.1s.gif in Resources */,
+				1829BA0024FF669000FE7885 /* pdf.png in Resources */,
 				4BF6B62E20876EA800DE934C /* frame_24_delay-0.1s.gif in Resources */,
 				4B462690203DDCDB00833809 /* login_img.png in Resources */,
 				4BF6B62420876EA800DE934C /* frame_14_delay-0.1s.gif in Resources */,
@@ -1606,6 +1627,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C87B9785FD8DB81878F12169 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OlympusCVM/Pods-OlympusCVM-resources.sh",
+				"${PODS_ROOT}/youtube-ios-player-helper/youtube-ios-player-helper/Assets.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Assets.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OlympusCVM/Pods-OlympusCVM-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		F64E7B847399D325D61C744B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1654,6 +1693,7 @@
 				4B3212FE21CAD0CE0013A31F /* SDWebImageDownloader.m in Sources */,
 				4B623EB1204525DA001B9ADE /* AccountSummaryViewController.m in Sources */,
 				4B32130421CAD0CE0013A31F /* SDWebImageDownloaderOperation.m in Sources */,
+				1879077824FFAC78006CF980 /* VideoListingViewController.m in Sources */,
 				4B83A4CA1FEA60FD00E887E9 /* SignUpViewController.m in Sources */,
 				4B1E063C20B2AA0F0027F6FE /* AFURLSessionManager.m in Sources */,
 				4B32130721CAD0CE0013A31F /* NSImage+WebCache.m in Sources */,
@@ -1673,6 +1713,7 @@
 				4B32130321CAD0CE0013A31F /* SDImageCache.m in Sources */,
 				4BD6AB24206A577100E6F01D /* ExistingRequestViewController.m in Sources */,
 				4BF6B5DF2085C4AE00DE934C /* UIViewController+MFSideMenuAdditions.m in Sources */,
+				1879077524FFA447006CF980 /* UIViewController+Presentation.m in Sources */,
 				4B83A44F1FE98CA200E887E9 /* AppDelegate.m in Sources */,
 				4B6923B8203AE61200ECF2C7 /* RemarksViewController.m in Sources */,
 				4B1E063B20B2AA0F0027F6FE /* AFURLResponseSerialization.m in Sources */,
@@ -1682,6 +1723,7 @@
 				4BF6B5E22085D50000DE934C /* TutorialViewController.m in Sources */,
 				4BF6B5E82085D53500DE934C /* TermsofUseViewController.m in Sources */,
 				4B1E063820B2AA0F0027F6FE /* AFNetworkReachabilityManager.m in Sources */,
+				1879077B2500F034006CF980 /* YoutubePlayerViewController.m in Sources */,
 				4BBA808722B8B222004C7CFC /* PopupViewController.m in Sources */,
 				4BF6B5DE2085C4AE00DE934C /* MFSideMenuShadow.m in Sources */,
 				4B623EB72045386D001B9ADE /* OTPViewController.m in Sources */,

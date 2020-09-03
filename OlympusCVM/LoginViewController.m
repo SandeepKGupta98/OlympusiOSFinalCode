@@ -16,6 +16,7 @@
 #import "ForgetPassViewController.h"
 #import "FeedbackViewController.h"
 #import "MFSideMenuContainerViewController.h"
+#import <objc/runtime.h>
 
 #define screen_hgt ([[UIScreen mainScreen] bounds].size.height)
 #define screen_wdth ([[UIScreen mainScreen] bounds].size.width)
@@ -29,6 +30,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.loaderView.hidden = YES;
+    
+    Ivar ivar =  class_getInstanceVariable([UITextField class], "_placeholderLabel");
+    UILabel *placeholderLabel = object_getIvar(self.username, ivar);
+    placeholderLabel.textColor = [UIColor colorWithRed:217/255.0 green:217/255.0 blue:217/255.0 alpha:1.0];
+
+    UILabel *pwdplaceholderLabel = object_getIvar(self.password, ivar);
+    pwdplaceholderLabel.textColor = [UIColor colorWithRed:217/255.0 green:217/255.0 blue:217/255.0 alpha:1.0];
+
+    
     if ( UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad )
     {
 //        self.username.layer.cornerRadius = 10.0f;

@@ -10,6 +10,7 @@
 #import "ViewController.h"
 #import "UtilsManager.h"
 #import "FeedbackViewController.h"
+#import "VideoListingViewController.h"
 
 #define screen_hgt ([[UIScreen mainScreen] bounds].size.height)
 #define screen_wdth ([[UIScreen mainScreen] bounds].size.width)
@@ -387,21 +388,16 @@
     
     self.otherImg.image = [UIImage imageNamed:@"w4.png"];
     if ([[[NSUserDefaults standardUserDefaults] valueForKey:@"isLogin"] boolValue]) {
-//        PopupViewController *popupVC = [mainStoryboard instantiateViewControllerWithIdentifier:@"popupVC"];
-//        [self presentViewController:popupVC animated:YES completion:nil];
-//        //popupVC.iconImg.image = [UIImage imageNamed:@"y4.png"];
-//        popupVC.descLbl.text = @"";
-//        popupVC.delegate = self;
-//        popupVC.type = PopupViewTypeOthers;
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"MY VOICE" message:@"Coming Soon!" preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {    }];
-        [alert addAction:ok];
-        [self presentViewController:alert animated:YES completion:nil];
+//        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"MY VOICE" message:@"Coming Soon!" preferredStyle:UIAlertControllerStyleAlert];
+//        UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {    }];
+//        [alert addAction:ok];
+//        [self presentViewController:alert animated:YES completion:nil];
 
-//        [NSThread sleepForTimeInterval:0.3];
-//        OptionsViewController *ovc = [mainStoryboard instantiateViewControllerWithIdentifier:@"optionsVC"];
+        
+        [NSThread sleepForTimeInterval:0.3];
+        VideoListingViewController *ovc = [mainStoryboard instantiateViewControllerWithIdentifier:@"videoListingVC"];
 //        ovc.superCate = @"others";
-//        [self.navigationController pushViewController:ovc animated:NO];
+        [self.navigationController pushViewController:ovc animated:NO];
     }else{
         LoginViewController *loginVC = [mainStoryboard instantiateViewControllerWithIdentifier:@"loginVC"];
         loginVC.delegate = self;
