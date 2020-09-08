@@ -52,7 +52,7 @@
     self.serviceImg.image = [UIImage imageNamed:@"w1"];
     self.enquiryImg.image = [UIImage imageNamed:@"w2"];
     self.academicImg.image = [UIImage imageNamed:@"w3"];
-    self.otherImg.image = [UIImage imageNamed:@"w4"];
+    self.otherImg.image = [UIImage imageNamed:@"new_video_w"];
 }
 
 - (void)menuStateEventOccurred:(NSNotification *)notification {
@@ -386,7 +386,7 @@
 - (IBAction)otherButtonTapped:(id)sender{
     UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
     
-    self.otherImg.image = [UIImage imageNamed:@"w4.png"];
+    self.otherImg.image = [UIImage imageNamed:@"new_video_w.png"];
     if ([[[NSUserDefaults standardUserDefaults] valueForKey:@"isLogin"] boolValue]) {
 //        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"MY VOICE" message:@"Coming Soon!" preferredStyle:UIAlertControllerStyleAlert];
 //        UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {    }];
@@ -407,13 +407,13 @@
     }
 }
 - (IBAction)otherTouchDown:(id)sender{
-    self.otherImg.image = [UIImage imageNamed:@"y4.png"];
+    self.otherImg.image = [UIImage imageNamed:@"new_video_y.png"];
 }
 - (IBAction)otherDragInside:(id)sender{
-    self.otherImg.image = [UIImage imageNamed:@"w4.png"];
+    self.otherImg.image = [UIImage imageNamed:@"new_video_w.png"];
 }
 - (IBAction)otherDragOutside:(id)sender{
-    self.otherImg.image = [UIImage imageNamed:@"w4.png"];
+    self.otherImg.image = [UIImage imageNamed:@"new_video_w.png"];
 }
 -(void)enterButtonTapped:(PopupViewController *)vc withType:(PopupViewType)type{
     UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];

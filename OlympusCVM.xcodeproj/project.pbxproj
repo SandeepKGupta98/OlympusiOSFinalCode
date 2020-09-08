@@ -12,6 +12,10 @@
 		1879077524FFA447006CF980 /* UIViewController+Presentation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1879077424FFA447006CF980 /* UIViewController+Presentation.m */; };
 		1879077824FFAC78006CF980 /* VideoListingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1879077724FFAC78006CF980 /* VideoListingViewController.m */; };
 		1879077B2500F034006CF980 /* YoutubePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1879077A2500F034006CF980 /* YoutubePlayerViewController.m */; };
+		1879077E25021BA9006CF980 /* videos_yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 1879077C25021BA8006CF980 /* videos_yellow.png */; };
+		1879077F25021BA9006CF980 /* videos_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 1879077D25021BA9006CF980 /* videos_white.png */; };
+		187907822502253D006CF980 /* new_video_y.png in Resources */ = {isa = PBXBuildFile; fileRef = 187907802502253C006CF980 /* new_video_y.png */; };
+		187907832502253D006CF980 /* new_video_w.png in Resources */ = {isa = PBXBuildFile; fileRef = 187907812502253C006CF980 /* new_video_w.png */; };
 		46130BA2E56619D3B9B0A40A /* libPods-OlympusCVMUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E6E767B054363B34C511A6 /* libPods-OlympusCVMUITests.a */; };
 		4B0AA5FC21D616640048749E /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B0AA5FB21D616610048749E /* user.png */; };
 		4B0AA60021D645360048749E /* list.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B0AA5FF21D645320048749E /* list.png */; };
@@ -315,6 +319,10 @@
 		1879077724FFAC78006CF980 /* VideoListingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoListingViewController.m; sourceTree = "<group>"; };
 		187907792500F034006CF980 /* YoutubePlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YoutubePlayerViewController.h; sourceTree = "<group>"; };
 		1879077A2500F034006CF980 /* YoutubePlayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YoutubePlayerViewController.m; sourceTree = "<group>"; };
+		1879077C25021BA8006CF980 /* videos_yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = videos_yellow.png; sourceTree = "<group>"; };
+		1879077D25021BA9006CF980 /* videos_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = videos_white.png; sourceTree = "<group>"; };
+		187907802502253C006CF980 /* new_video_y.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = new_video_y.png; sourceTree = "<group>"; };
+		187907812502253C006CF980 /* new_video_w.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = new_video_w.png; sourceTree = "<group>"; };
 		266142F7362963860AE35A84 /* libPods-OlympusCVM.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OlympusCVM.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F9E361F86F2B00DBA72E4E8 /* Pods-OlympusCVMTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OlympusCVMTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OlympusCVMTests/Pods-OlympusCVMTests.release.xcconfig"; sourceTree = "<group>"; };
 		4B0AA5FB21D616610048749E /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
@@ -733,6 +741,10 @@
 				4B0AFAFB208DDCFE007FFF17 /* y2.png */,
 				4B72D01A22A7916D0088FBD8 /* w4.png */,
 				4B72D01B22A791760088FBD8 /* y4.png */,
+				1879077D25021BA9006CF980 /* videos_white.png */,
+				1879077C25021BA8006CF980 /* videos_yellow.png */,
+				187907812502253C006CF980 /* new_video_w.png */,
+				187907802502253C006CF980 /* new_video_y.png */,
 			);
 			path = "Option Icon";
 			sourceTree = "<group>";
@@ -1376,6 +1388,7 @@
 				4B7DB50F2091EE8100532D53 /* option_history3.png in Resources */,
 				4B83A4851FEA276800E887E9 /* user_placeholder.png in Resources */,
 				4B1E061D20ABF20E0027F6FE /* new_req_y.png in Resources */,
+				187907822502253D006CF980 /* new_video_y.png in Resources */,
 				4BB922F020A2C42200E95CD9 /* Splashscreen_iPad.jpg in Resources */,
 				4B83A4B71FEA520400E887E9 /* RobotoCondensed-Regular.ttf in Resources */,
 				4B0AFAF0208884CE007FFF17 /* sidemenu_logo.png in Resources */,
@@ -1437,6 +1450,7 @@
 				4B8F08CB20964441000DB2FA /* up_arrow_w.png in Resources */,
 				4B758EBA221BEE6E00F5F1CB /* horz_line.png in Resources */,
 				4B43C9A8208F011200F8C235 /* bearkdown_w.png in Resources */,
+				1879077F25021BA9006CF980 /* videos_white.png in Resources */,
 				4B9D91CE22C25C0400BCD55A /* service_banner.jpg in Resources */,
 				4BD6AB21206A53AB00E6F01D /* background1.png in Resources */,
 				4BF6B62120876EA800DE934C /* frame_11_delay-0.1s.gif in Resources */,
@@ -1493,6 +1507,7 @@
 				4B1E061C20ABF20E0027F6FE /* training_w.png in Resources */,
 				4B96FA9421DC888F006BE806 /* timeline.png in Resources */,
 				4B1E062120ABF20E0027F6FE /* new_req_w.png in Resources */,
+				1879077E25021BA9006CF980 /* videos_yellow.png in Resources */,
 				4B1E062720ABF20E0027F6FE /* w3.png in Resources */,
 				4B43C9A7208F011200F8C235 /* quotation_y.png in Resources */,
 				4B83A4AC1FEA520400E887E9 /* Roboto-LightItalic.ttf in Resources */,
@@ -1519,6 +1534,7 @@
 				4B13D66122CD1F6700E74311 /* image8.png in Resources */,
 				4B83A4B01FEA520400E887E9 /* Roboto-Thin.ttf in Resources */,
 				4B83A4A51FEA520400E887E9 /* Apache License.txt in Resources */,
+				187907832502253D006CF980 /* new_video_w.png in Resources */,
 				4BDE8E8320BC6363004200F3 /* delete.png in Resources */,
 				4BBA808822B8B222004C7CFC /* PopupViewController.xib in Resources */,
 				4BDE8E7C20BBDC6B004200F3 /* respiratory.png in Resources */,
@@ -1897,10 +1913,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = OlympusCVM/OlympusCVM.entitlements;
+				CURRENT_PROJECT_VERSION = 1.0.0.0;
 				DEVELOPMENT_TEAM = K8HVGGJGBB;
 				INFOPLIST_FILE = OlympusCVM/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.19;
 				PRODUCT_BUNDLE_IDENTIFIER = com.olympusindia.MyVoice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1913,10 +1931,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = OlympusCVM/OlympusCVM.entitlements;
+				CURRENT_PROJECT_VERSION = 1.0.0.0;
 				DEVELOPMENT_TEAM = K8HVGGJGBB;
 				INFOPLIST_FILE = OlympusCVM/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.19;
 				PRODUCT_BUNDLE_IDENTIFIER = com.olympusindia.MyVoice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;

@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface YoutubePlayerViewController : UIViewController
 @property (weak, nonatomic)IBOutlet YTPlayerView *playerView;
-
+@property (strong, nonatomic) NSString *videoId;
 @end
 
 NS_ASSUME_NONNULL_END

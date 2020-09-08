@@ -20,6 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface VideoListCell : UITableViewCell
 @property (weak, nonatomic)IBOutlet UIImageView *videoImg;
 @property (weak, nonatomic)IBOutlet UILabel *videoName;
+@property (weak, nonatomic)IBOutlet UILabel *videoDesc;
 @property (weak, nonatomic)IBOutlet UILabel *videoDate;
 @property (weak, nonatomic)IBOutlet UILabel *viewCountLbl;
 @end

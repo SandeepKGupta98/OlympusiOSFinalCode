@@ -30,45 +30,59 @@
     [self getInboxFromServer];
 }
  
+
+#pragma mark- Other Action methods
+
+- (IBAction)backButtonTapped:(id)sender {
+    [self.navigationController popViewControllerAnimated:NO];
+}
+
 #pragma mark-  Get Inbox From Servar Method
 -(void)getInboxFromServer{
+    
+    
+            AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc]initWithSessionConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+            manager.requestSerializer = [AFJSONRequestSerializer serializer];
+            [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+            
+    //    https://www.olympusmyvoice.tk/api/v1/videos?auth_token=5c2b9071-a675-49b0-8fb2-9cd894da1c87
+
+            NSString *url = @"https://www.olympusmyvoice.tk/api/v1/videos?auth_token=5c2b9071-a675-49b0-8fb2-9cd894da1c87";
+            
+
+            self.loaderView.hidden = NO;
+            [manager GET:url parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+                NSLog(@"completedUnitCount: %lld \n totalUnitCount: %lld",downloadProgress.completedUnitCount, downloadProgress.totalUnitCount);
+            } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                
+                self.loaderView.hidden = YES;
+                NSLog(@"success! with response: %@", responseObject);
+                NSArray *data = [NSArray arrayWithArray:responseObject];
+                videoAry = [NSMutableArray arrayWithArray:data];
+                [self.tableView reloadData];
+
+            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                self.loaderView.hidden = YES;
+                UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"" message:error.localizedDescription preferredStyle:UIAlertControllerStyleAlert];
+                UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+                [alert addAction:ok];
+                [self presentViewController:alert animated:YES completion:nil];
+            }];
+}
+
+-(void)setVideoWatchImpression:(NSDictionary *)videoDict{
+    
     AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc]initWithSessionConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-    
-    self.loaderView.hidden = NO;
-    NSDictionary *userInfo = [[UtilsManager sharedObject] getUserDetailsFromDefaultUser];
-    NSMutableDictionary *param = [[NSMutableDictionary alloc] init];
-    [param setObject:Auth_Token_New forKey:Auth_Token_KEY];
-    //    [param setObject:[self.type lowercaseString] forKey:@"request_type"];
-    [param setObject:[userInfo valueForKey:@"id"] forKey:@"customer_id"];
-    
-    
-    NSString *apiurl;
-    NSDictionary *userData = [[UtilsManager sharedObject] getUserDetailsFromDefaultUser];
-    if ([[userData valueForKey:@"is_testing"] boolValue]) {
-        apiurl = [NSString stringWithFormat:@"%@/api/v1/promailersLatest",[userData valueForKey:@"testing_url"]];
-    }else{
-        apiurl = [NSString stringWithFormat:@"%@/api/v1/promailersLatest",base_url];
-    }
-
-    [manager POST:apiurl parameters:param progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        self.loaderView.hidden = YES;
+    NSString *url = [NSString stringWithFormat:@"https://www.olympusmyvoice.tk/api/v1/video/%@/%@?auth_token=5c2b9071-a675-49b0-8fb2-9cd894da1c87",[videoDict valueForKey:@"id"], [[[UtilsManager sharedObject] getUserDetailsFromDefaultUser] valueForKey:@"id"]];
+//    https://www.olympusmyvoice.tk/api/v1/video/2/25?auth_token=5c2b9071-a675-49b0-8fb2-9cd894da1c87
+    [manager GET:url parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+        NSLog(@"completedUnitCount: %lld \n totalUnitCount: %lld",downloadProgress.completedUnitCount, downloadProgress.totalUnitCount);
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSLog(@"success! with response: %@", responseObject);
-        NSDictionary *responseDict = [NSDictionary dictionaryWithDictionary:responseObject];
-        
-        if ([[responseDict valueForKey:@"status"] intValue] == 200) {
-//            historyInfo = [NSDictionary dictionaryWithDictionary:[responseDict valueForKey:@"data"]];
-            videoAry = [NSMutableArray arrayWithArray:[responseDict valueForKey:@"data"]];
-            [self.tableView reloadData];
-        }
-        
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        self.loaderView.hidden = YES;
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"" message:error.localizedDescription preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
-        [alert addAction:ok];
-        [self presentViewController:alert animated:YES completion:nil];
+        NSLog(@"%@",error.localizedDescription);
     }];
 }
 
@@ -86,36 +100,42 @@
     if (cell == nil){
         cell = [[VideoListCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"videoListCell"];
     }
-    NSDictionary *videoDict = [videoAry objectAtIndex:indexPath.row];
-      NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
+        NSDictionary *videoDict = [videoAry objectAtIndex:indexPath.row];
+        NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
         dateFormatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
         NSDate *yourDate = [dateFormatter dateFromString:[videoDict valueForKey:@"created_at"]];
         dateFormatter.dateFormat = @"dd MMM yyyy";
         
         
-        cell.videoDate.text = [dateFormatter stringFromDate:yourDate];
-        cell.videoName.text = [NSString stringWithFormat:@"%@ %@",[videoDict valueForKey:@"title"], [videoDict valueForKey:@"abbreviation"]];
-        
-
-        [cell.videoImg sd_setImageWithURL:[NSURL URLWithString:@"https://img.youtube.com/vi/y7Ulq5dvTpo/hqdefault.jpg"] placeholderImage:[UIImage imageNamed:@"user_placeholder.png"]];
-//    [videoDict valueForKey:@"frontimage"]
-
-    
-////    [cell.videoImg sd_setImageWithURL:[NSURL URLWithString:@"http://i3.ytimg.com/vi/EngW7tLk6R8/maxresdefault.jpg"] placeholderImage:nil];
-//    [cell.videoImg sd_setImageWithURL:[NSURL URLWithString:@"https://i.picsum.photos/id/237/200/300.jpg?hmac=TmmQSbShHz9CdQm0NkEjx1Dyh_Y984R9LpNrpvH2D_U"] placeholderImage:nil];
-//
-//    cell.videoName.text = @"Sample Videos / Dummy Videos For Demo Use";
-//    cell.viewCountLbl.text = @"126,334 views";
-//    cell.videoDate.text = @"May 11, 2016";
+//        cell.videoDate.text = [dateFormatter stringFromDate:yourDate];
+    cell.videoDate.text = [videoDict valueForKey:@"created_at_readable"];
+    cell.videoName.text = [videoDict valueForKey:@"title"];
+//    [NSString stringWithFormat:@"%@ %@",[videoDict valueForKey:@"title"], [videoDict valueForKey:@"description"]];
+    cell.videoDesc.text = [videoDict valueForKey:@"description"];
+    cell.viewCountLbl.text = [NSString stringWithFormat:@"%@ Views",[videoDict valueForKey:@"customers_count"]];
+    NSString *url = [videoDict valueForKey:@"url"];
+    NSString *videoId = [[UtilsManager sharedObject] extractYoutubeIdFromLink:url];
+    if (videoId != nil){
+        [cell.videoImg sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://img.youtube.com/vi/%@/hqdefault.jpg", videoId]] placeholderImage:nil];//y7Ulq5dvTpo
+        NSLog(@"%@", [NSString stringWithFormat:@"https://img.youtube.com/vi/%@/hqdefault.jpg", videoId]);
+    }
+     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    UIStoryboard *mainStoryboard;
-    mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
-    YoutubePlayerViewController *ytPlayer=[mainStoryboard instantiateViewControllerWithIdentifier:@"youtubePlayerVC"];
-    [self presentViewController:ytPlayer animated:YES completion:^{}];
+    NSDictionary *videoDict = [videoAry objectAtIndex:indexPath.row];
+    NSString *url = [videoDict valueForKey:@"url"];
+    NSString *videoId = [[UtilsManager sharedObject] extractYoutubeIdFromLink:url];
+    if (videoId){
+        UIStoryboard *mainStoryboard;
+        mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
+        YoutubePlayerViewController *ytPlayer=[mainStoryboard instantiateViewControllerWithIdentifier:@"youtubePlayerVC"];
+        ytPlayer.videoId = videoId;
+        [self presentViewController:ytPlayer animated:YES completion:^{}];
+    }
+    [self setVideoWatchImpression:videoDict];
 
 }
 

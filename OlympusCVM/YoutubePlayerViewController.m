@@ -22,8 +22,8 @@
     self.playerView.delegate = self;
 
 
-    NSString *videoId = [[UtilsManager sharedObject] extractYoutubeIdFromLink:SampleVideoURL];
-    if (videoId) {
+//    NSString *videoId = [[UtilsManager sharedObject] extractYoutubeIdFromLink:SampleVideoURL];
+    if (self.videoId) {
         activityView = [[UIActivityIndicatorView alloc] init];
         activityView.layer.cornerRadius = 7;
         
@@ -34,7 +34,7 @@
         NSDictionary *playerVars = @{
                                      @"playsinline" : @1,
                                      };
-        [self.playerView loadWithVideoId:videoId playerVars:playerVars];
+        [self.playerView loadWithVideoId:self.videoId playerVars:playerVars];
     }else{
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"" message:@"Invalid Url" preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
