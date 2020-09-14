@@ -13,6 +13,8 @@
 
 @interface VideoListingViewController (){
     NSMutableArray *videoAry;
+    NSInteger pageNum ;
+    BOOL shouldFetchRequest;
 }
     
 @end
@@ -22,12 +24,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    pageNum = 0;
+    shouldFetchRequest = YES;
+    self.loaderView.hidden = NO;
     videoAry = [[NSMutableArray alloc] init];
+    if (shouldFetchRequest) {
+        [self getInboxFromServer];
+    }
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    [self getInboxFromServer];
+
 }
  
 
@@ -39,30 +47,49 @@
 
 #pragma mark-  Get Inbox From Servar Method
 -(void)getInboxFromServer{
-    
-    
+    shouldFetchRequest = NO;
+
+    pageNum = pageNum+1;
             AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc]initWithSessionConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
             manager.requestSerializer = [AFJSONRequestSerializer serializer];
             [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
             
     //    https://www.olympusmyvoice.tk/api/v1/videos?auth_token=5c2b9071-a675-49b0-8fb2-9cd894da1c87
 
-            NSString *url = @"https://www.olympusmyvoice.tk/api/v1/videos?auth_token=5c2b9071-a675-49b0-8fb2-9cd894da1c87";
             
-
-            self.loaderView.hidden = NO;
+            
+    NSString *url = [NSString stringWithFormat:@"https://www.olympusmyvoice.tk/api/v1/videos?auth_token=5c2b9071-a675-49b0-8fb2-9cd894da1c87&page=%ld",pageNum];
+    NSLog(@"URL: %@", url);
             [manager GET:url parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
                 NSLog(@"completedUnitCount: %lld \n totalUnitCount: %lld",downloadProgress.completedUnitCount, downloadProgress.totalUnitCount);
             } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                 
                 self.loaderView.hidden = YES;
+                shouldFetchRequest = YES;
+                self.tableView.tableFooterView.hidden = YES;
+
                 NSLog(@"success! with response: %@", responseObject);
-                NSArray *data = [NSArray arrayWithArray:responseObject];
-                videoAry = [NSMutableArray arrayWithArray:data];
+                if ([responseObject isKindOfClass:[NSArray class]]){
+                    NSArray *data = [NSArray arrayWithArray:responseObject];
+                    [videoAry addObjectsFromArray:data];
+                    if (data.count < 20){
+                        shouldFetchRequest = NO;
+                    }
+                }else if ([responseObject isKindOfClass:[NSDictionary class]]){
+                    NSArray *data = [NSArray arrayWithArray:[responseObject valueForKey:@"data"]];
+//                    videoAry =  [NSMutableArray arrayWithArray:data];
+                    [videoAry addObjectsFromArray:data];
+                    if (data.count < 20){
+                        shouldFetchRequest = NO;
+                    }
+                }
+                
                 [self.tableView reloadData];
 
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                 self.loaderView.hidden = YES;
+                shouldFetchRequest = YES;
+                self.tableView.tableFooterView.hidden = YES;
                 UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"" message:error.localizedDescription preferredStyle:UIAlertControllerStyleAlert];
                 UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
                 [alert addAction:ok];
@@ -139,6 +166,21 @@
 
 }
 
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.row == videoAry.count-1){
+        NSLog(@"Index Path Row: %ld", indexPath.row);
+        if (shouldFetchRequest) {
+            UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+            [spinner startAnimating];
+            spinner.frame = CGRectMake(0, 0, self.tableView.bounds.size.width, 44);
+            self.tableView.tableFooterView = spinner;
+            self.tableView.tableFooterView.hidden = NO;
+            [self getInboxFromServer];
+        }
+    }else{
+        NSLog(@"Other %ld", indexPath.row);
+    }
+}
 @end
 
 @implementation VideoListCell
