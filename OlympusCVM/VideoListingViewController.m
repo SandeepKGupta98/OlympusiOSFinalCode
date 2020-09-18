@@ -28,13 +28,13 @@
     shouldFetchRequest = YES;
     self.loaderView.hidden = NO;
     videoAry = [[NSMutableArray alloc] init];
-    if (shouldFetchRequest) {
-        [self getInboxFromServer];
-    }
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    pageNum = 0;
+    [videoAry removeAllObjects];
+    [self getInboxFromServer];
 
 }
  
@@ -43,6 +43,12 @@
 
 - (IBAction)backButtonTapped:(id)sender {
     [self.navigationController popViewControllerAnimated:NO];
+}
+-(void)showAlertWithMessage:(NSString *)msg{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Invalid Video" message:msg preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+    [alert addAction:ok];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 #pragma mark-  Get Inbox From Servar Method
@@ -128,25 +134,20 @@
         cell = [[VideoListCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"videoListCell"];
     }
         NSDictionary *videoDict = [videoAry objectAtIndex:indexPath.row];
-        NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
-        dateFormatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
-        NSDate *yourDate = [dateFormatter dateFromString:[videoDict valueForKey:@"created_at"]];
-        dateFormatter.dateFormat = @"dd MMM yyyy";
-        
-        
+//        NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
+//        dateFormatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+//        NSDate *yourDate = [dateFormatter dateFromString:[videoDict valueForKey:@"created_at"]];
+//        dateFormatter.dateFormat = @"dd MMM yyyy";
 //        cell.videoDate.text = [dateFormatter stringFromDate:yourDate];
     cell.videoDate.text = [videoDict valueForKey:@"created_at_readable"];
     cell.videoName.text = [videoDict valueForKey:@"title"];
-//    [NSString stringWithFormat:@"%@ %@",[videoDict valueForKey:@"title"], [videoDict valueForKey:@"description"]];
     cell.videoDesc.text = [videoDict valueForKey:@"description"];
     cell.viewCountLbl.text = [NSString stringWithFormat:@"%@ Views",[videoDict valueForKey:@"customers_count"]];
     NSString *url = [videoDict valueForKey:@"url"];
     NSString *videoId = [[UtilsManager sharedObject] extractYoutubeIdFromLink:url];
     if (videoId != nil){
-        [cell.videoImg sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://img.youtube.com/vi/%@/hqdefault.jpg", videoId]] placeholderImage:nil];//y7Ulq5dvTpo
-        NSLog(@"%@", [NSString stringWithFormat:@"https://img.youtube.com/vi/%@/hqdefault.jpg", videoId]);
+        [cell.videoImg sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://img.youtube.com/vi/%@/hqdefault.jpg", videoId]] placeholderImage:nil];
     }
-     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
@@ -161,6 +162,9 @@
         YoutubePlayerViewController *ytPlayer=[mainStoryboard instantiateViewControllerWithIdentifier:@"youtubePlayerVC"];
         ytPlayer.videoId = videoId;
         [self presentViewController:ytPlayer animated:YES completion:^{}];
+    }else{
+        [self showAlertWithMessage:[NSString stringWithFormat:@"\n %@ ",url]];
+        NSLog(@"********* Invalid Video: %@ *********",url);
     }
     [self setVideoWatchImpression:videoDict];
 
@@ -178,7 +182,7 @@
             [self getInboxFromServer];
         }
     }else{
-        NSLog(@"Other %ld", indexPath.row);
+//        NSLog(@"Other %ld", indexPath.row);
     }
 }
 @end

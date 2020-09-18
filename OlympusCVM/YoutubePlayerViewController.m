@@ -33,8 +33,13 @@
         [activityView startAnimating];
         NSDictionary *playerVars = @{
                                      @"playsinline" : @1,
+                                     @"rel" : @0,
                                      };
+        
+
+//        self.videoId = @"9lEgn8iZhsM";// Unlisted
         [self.playerView loadWithVideoId:self.videoId playerVars:playerVars];
+//        [self.playerView cueVideoById:self.videoId startSeconds:0 suggestedQuality:kYTPlaybackQualityAuto];
     }else{
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"" message:@"Invalid Url" preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
@@ -51,6 +56,8 @@
         [activityView stopAnimating];
         [activityView removeFromSuperview];
     }
+    NSLog(@"%lf",_playerView.duration);
+    
 }
 
 
@@ -62,6 +69,9 @@
             NSLog(@"kYTPlayerStateUnstarted");
             break;
         case kYTPlayerStateEnded:
+//            [_playerView seekToSeconds:0 allowSeekAhead:YES];
+//            [_playerView pauseVideo];
+            [self hideVC];
             NSLog(@"kYTPlayerStateEnded");
             break;
         case kYTPlayerStatePlaying:
@@ -128,7 +138,6 @@
 
 - (void)playerView:(nonnull YTPlayerView *)playerView didPlayTime:(float)playTime{
     NSLog(@"playTime: %f",playTime);
-
 }
 
 
