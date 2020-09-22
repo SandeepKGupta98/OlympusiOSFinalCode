@@ -20,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.playerView.delegate = self;
-
+    [self.optionView setHidden:YES];
 
 //    NSString *videoId = [[UtilsManager sharedObject] extractYoutubeIdFromLink:SampleVideoURL];
     if (self.videoId) {
@@ -33,12 +33,18 @@
         [activityView startAnimating];
         NSDictionary *playerVars = @{
                                      @"playsinline" : @1,
-                                     @"rel" : @0,
+//                                     @"rel" : @0,
+//                                     @"showinfo" : @0,
+//                                     @"controls" : @0,
+//                                     @"modestbranding": @1,
+
                                      };
         
 
 //        self.videoId = @"9lEgn8iZhsM";// Unlisted
         [self.playerView loadWithVideoId:self.videoId playerVars:playerVars];
+//        self.playerView.backgroundColor = [UIColor redColor];
+        
 //        [self.playerView cueVideoById:self.videoId startSeconds:0 suggestedQuality:kYTPlaybackQualityAuto];
     }else{
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"" message:@"Invalid Url" preferredStyle:UIAlertControllerStyleAlert];
@@ -56,6 +62,8 @@
         [activityView stopAnimating];
         [activityView removeFromSuperview];
     }
+    [self.optionView setHidden:NO];
+
     NSLog(@"%lf",_playerView.duration);
     
 }
@@ -93,10 +101,6 @@
         default:
             break;
     }
-
-   if (state == kYTPlayerStateEnded) {
-//        [self hideVC];
-    }
     
 }
 
@@ -123,6 +127,9 @@
     [alert addAction:ok];
     [self presentViewController:alert animated:YES completion:nil];
     
+}
+-(UIColor *)playerViewPreferredWebViewBackgroundColor:(YTPlayerView *)playerView{
+    return [UIColor redColor];
 }
 -(void)hideVC{
     [self dismissViewControllerAnimated:YES completion:nil];

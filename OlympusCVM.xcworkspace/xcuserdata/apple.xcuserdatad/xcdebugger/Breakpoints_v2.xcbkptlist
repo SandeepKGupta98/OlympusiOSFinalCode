@@ -40,7 +40,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "438C1BC4-4918-4DD2-B093-5EE969BC03DD"
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OlympusCVM/VideoListingViewController.m"
@@ -53,7 +53,7 @@
             <Locations>
                <Location
                   uuid = "438C1BC4-4918-4DD2-B093-5EE969BC03DD - f17e19fb1036b949"
-                  shouldBeEnabled = "No"
+                  shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "-[VideoListingViewController setVideoWatchImpression:]"
@@ -62,13 +62,13 @@
                   urlString = "file:///Users/apple/Documents/MyVoice%20India/olympus-myvoice-india/OlympusCVM/VideoListingViewController.m"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "115"
-                  endingLineNumber = "115"
+                  startingLineNumber = "113"
+                  endingLineNumber = "113"
                   offsetFromSymbolStart = "602">
                </Location>
                <Location
                   uuid = "438C1BC4-4918-4DD2-B093-5EE969BC03DD - dd32fe7b5ef2c654"
-                  shouldBeEnabled = "No"
+                  shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "__54-[VideoListingViewController setVideoWatchImpression:]_block_invoke"
@@ -77,8 +77,8 @@
                   urlString = "file:///Users/apple/Documents/MyVoice%20India/olympus-myvoice-india/OlympusCVM/VideoListingViewController.m"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "116"
-                  endingLineNumber = "116"
+                  startingLineNumber = "114"
+                  endingLineNumber = "114"
                   offsetFromSymbolStart = "44">
                </Location>
             </Locations>
