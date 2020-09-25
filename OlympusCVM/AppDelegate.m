@@ -47,8 +47,7 @@
         UIView *statusBar = [[UIView alloc]initWithFrame:[UIApplication sharedApplication].keyWindow.windowScene.statusBarManager.statusBarFrame] ;
         statusBar.backgroundColor = [UIColor colorWithRed:8/255.0 green:16/255.0 blue:123/255.0 alpha:1.0];
         [[UIApplication sharedApplication].keyWindow addSubview:statusBar];
-
-
+        self.window.overrideUserInterfaceStyle = UIUserInterfaceStyleDark;
     }else{
 
         UIView *statusBar = [[[UIApplication sharedApplication] valueForKey:@"statusBarWindow"] valueForKey:@"statusBar"];
@@ -132,6 +131,7 @@
     [application registerForRemoteNotifications];
     return YES;
 }
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

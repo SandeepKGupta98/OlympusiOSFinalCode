@@ -32,7 +32,7 @@
         [self.playerView addSubview:activityView];
         [activityView startAnimating];
         NSDictionary *playerVars = @{
-                                     @"playsinline" : @1,
+                                     @"playsinline" : @0,
 //                                     @"rel" : @0,
 //                                     @"showinfo" : @0,
 //                                     @"controls" : @0,
@@ -55,6 +55,7 @@
 
 
 }
+
 
 -(void)playerViewDidBecomeReady:(YTPlayerView *)playerView{
     [self.playerView playVideo];

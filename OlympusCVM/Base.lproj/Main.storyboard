@@ -309,26 +309,38 @@
                                     <constraint firstAttribute="bottom" secondItem="UMV-UI-GPx" secondAttribute="bottom" id="qC6-C5-OOJ"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vdi-on-BHY">
-                                <rect key="frame" x="315" y="70" width="50" height="50"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zzS-P9-FjB">
+                                <rect key="frame" x="0.0" y="60" width="375" height="70"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vdi-on-BHY">
+                                        <rect key="frame" x="315" y="10" width="50" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="CGO-b2-LFK"/>
+                                            <constraint firstAttribute="width" constant="50" id="f1J-qS-xGl"/>
+                                        </constraints>
+                                        <state key="normal">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="CGO-b2-LFK"/>
-                                    <constraint firstAttribute="width" constant="50" id="f1J-qS-xGl"/>
+                                    <constraint firstAttribute="height" constant="70" id="FUc-c7-U3O"/>
+                                    <constraint firstItem="Vdi-on-BHY" firstAttribute="top" secondItem="zzS-P9-FjB" secondAttribute="top" constant="10" id="e4F-uZ-g16"/>
+                                    <constraint firstAttribute="trailing" secondItem="Vdi-on-BHY" secondAttribute="trailing" constant="10" id="i1c-yO-6Vy"/>
                                 </constraints>
-                                <state key="normal">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.031372549020000001" green="0.062745098040000002" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Vdi-on-BHY" firstAttribute="top" secondItem="EP2-6j-tNh" secondAttribute="bottom" constant="10" id="5CJ-Dk-x6V"/>
+                            <constraint firstItem="zzS-P9-FjB" firstAttribute="leading" secondItem="ib4-MQ-D5m" secondAttribute="leading" id="95s-A7-gwC"/>
+                            <constraint firstItem="zzS-P9-FjB" firstAttribute="top" secondItem="EP2-6j-tNh" secondAttribute="bottom" id="BWu-bh-bss"/>
                             <constraint firstAttribute="trailing" secondItem="EP2-6j-tNh" secondAttribute="trailing" id="GVE-ma-11H"/>
                             <constraint firstItem="2P8-TO-2nh" firstAttribute="top" secondItem="cJg-aO-s8T" secondAttribute="bottom" id="KYB-rQ-FdO"/>
                             <constraint firstItem="cJg-aO-s8T" firstAttribute="top" secondItem="EP2-6j-tNh" secondAttribute="bottom" id="Sh6-Xa-1kg"/>
                             <constraint firstItem="EP2-6j-tNh" firstAttribute="top" secondItem="Kca-Ak-1nZ" secondAttribute="bottom" id="Wje-Xu-Evk"/>
-                            <constraint firstAttribute="trailing" secondItem="Vdi-on-BHY" secondAttribute="trailing" constant="10" id="i5j-Of-sH6"/>
+                            <constraint firstAttribute="trailing" secondItem="zzS-P9-FjB" secondAttribute="trailing" id="mb4-XN-klZ"/>
                             <constraint firstAttribute="trailing" secondItem="cJg-aO-s8T" secondAttribute="trailing" id="pEe-QE-ixc"/>
                             <constraint firstItem="cJg-aO-s8T" firstAttribute="leading" secondItem="ib4-MQ-D5m" secondAttribute="leading" id="rFJ-n2-QAd"/>
                             <constraint firstItem="EP2-6j-tNh" firstAttribute="leading" secondItem="ib4-MQ-D5m" secondAttribute="leading" id="tal-xK-kvg"/>
