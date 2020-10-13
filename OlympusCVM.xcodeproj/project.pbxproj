@@ -16,6 +16,7 @@
 		1879077F25021BA9006CF980 /* videos_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 1879077D25021BA9006CF980 /* videos_white.png */; };
 		187907822502253D006CF980 /* new_video_y.png in Resources */ = {isa = PBXBuildFile; fileRef = 187907802502253C006CF980 /* new_video_y.png */; };
 		187907832502253D006CF980 /* new_video_w.png in Resources */ = {isa = PBXBuildFile; fileRef = 187907812502253C006CF980 /* new_video_w.png */; };
+		18BAECB625230B4C0098B9B9 /* YTPlayerView+Mute_unMute.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BAECB525230B4C0098B9B9 /* YTPlayerView+Mute_unMute.m */; };
 		46130BA2E56619D3B9B0A40A /* libPods-OlympusCVMUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E6E767B054363B34C511A6 /* libPods-OlympusCVMUITests.a */; };
 		4B0AA5FC21D616640048749E /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B0AA5FB21D616610048749E /* user.png */; };
 		4B0AA60021D645360048749E /* list.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B0AA5FF21D645320048749E /* list.png */; };
@@ -323,6 +324,8 @@
 		1879077D25021BA9006CF980 /* videos_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = videos_white.png; sourceTree = "<group>"; };
 		187907802502253C006CF980 /* new_video_y.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = new_video_y.png; sourceTree = "<group>"; };
 		187907812502253C006CF980 /* new_video_w.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = new_video_w.png; sourceTree = "<group>"; };
+		18BAECB425230B4C0098B9B9 /* YTPlayerView+Mute_unMute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "YTPlayerView+Mute_unMute.h"; sourceTree = "<group>"; };
+		18BAECB525230B4C0098B9B9 /* YTPlayerView+Mute_unMute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "YTPlayerView+Mute_unMute.m"; sourceTree = "<group>"; };
 		266142F7362963860AE35A84 /* libPods-OlympusCVM.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OlympusCVM.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F9E361F86F2B00DBA72E4E8 /* Pods-OlympusCVMTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OlympusCVMTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OlympusCVMTests/Pods-OlympusCVMTests.release.xcconfig"; sourceTree = "<group>"; };
 		4B0AA5FB21D616610048749E /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
@@ -888,6 +891,8 @@
 		4B83A4491FE98CA200E887E9 /* OlympusCVM */ = {
 			isa = PBXGroup;
 			children = (
+				18BAECB425230B4C0098B9B9 /* YTPlayerView+Mute_unMute.h */,
+				18BAECB525230B4C0098B9B9 /* YTPlayerView+Mute_unMute.m */,
 				1829BA0124FF672100FE7885 /* avatar.png */,
 				1829B9FF24FF669000FE7885 /* pdf.png */,
 				4B13D65422CD169F00E74311 /* image1.jpg */,
@@ -1271,7 +1276,7 @@
 				4B83A4431FE98CA100E887E9 /* Sources */,
 				4B83A4441FE98CA100E887E9 /* Frameworks */,
 				4B83A4451FE98CA100E887E9 /* Resources */,
-				C87B9785FD8DB81878F12169 /* [CP] Copy Pods Resources */,
+				53C7B9E7C0410F221C42371F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1607,6 +1612,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		53C7B9E7C0410F221C42371F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OlympusCVM/Pods-OlympusCVM-resources.sh",
+				"${PODS_ROOT}/youtube-ios-player-helper/youtube-ios-player-helper/Assets.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Assets.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OlympusCVM/Pods-OlympusCVM-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		702EFB29359A05B8E3BCE7C4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1641,24 +1664,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C87B9785FD8DB81878F12169 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-OlympusCVM/Pods-OlympusCVM-resources.sh",
-				"${PODS_ROOT}/youtube-ios-player-helper/youtube-ios-player-helper/Assets.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Assets.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OlympusCVM/Pods-OlympusCVM-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F64E7B847399D325D61C744B /* [CP] Check Pods Manifest.lock */ = {
@@ -1723,6 +1728,7 @@
 				4B5CC8A02041E30700712014 /* HistoryViewController.m in Sources */,
 				4BF6B5EE2087201400DE934C /* VideoGIFViewController.m in Sources */,
 				4BED21EC20067D6000287F9F /* StatusViewController.m in Sources */,
+				18BAECB625230B4C0098B9B9 /* YTPlayerView+Mute_unMute.m in Sources */,
 				4B3212C621CAB4BF0013A31F /* InboxViewController.m in Sources */,
 				4B32130921CAD0CE0013A31F /* UIView+WebCacheOperation.m in Sources */,
 				4BDAEB2222C9D9C800E517B4 /* HundredYearLogo.m in Sources */,
@@ -1913,7 +1919,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = OlympusCVM/OlympusCVM.entitlements;
-				CURRENT_PROJECT_VERSION = 1.0.0.3;
+				CURRENT_PROJECT_VERSION = 1.0.0.5;
 				DEVELOPMENT_TEAM = K8HVGGJGBB;
 				INFOPLIST_FILE = OlympusCVM/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1931,7 +1937,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = OlympusCVM/OlympusCVM.entitlements;
-				CURRENT_PROJECT_VERSION = 1.0.0.3;
+				CURRENT_PROJECT_VERSION = 1.0.0.5;
 				DEVELOPMENT_TEAM = K8HVGGJGBB;
 				INFOPLIST_FILE = OlympusCVM/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

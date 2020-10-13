@@ -7,6 +7,8 @@
 //
 
 #import "YoutubePlayerViewController.h"
+#import "YTPlayerView+Mute_unMute.h"
+
 //#define SampleVideoURL @"https://www.youtube.com/watch?v=EngW7tLk6R8"
 #define SampleVideoURL @"https://www.youtube.com/watch?v=y7Ulq5dvTpo"
 @interface YoutubePlayerViewController ()<YTPlayerViewDelegate>{
@@ -66,6 +68,9 @@
     [self.optionView setHidden:NO];
 
     NSLog(@"%lf",_playerView.duration);
+    if ([_playerView isMuted]){
+        [_playerView unMuteVideo];
+    }
     
 }
 
@@ -84,6 +89,9 @@
             NSLog(@"kYTPlayerStateEnded");
             break;
         case kYTPlayerStatePlaying:
+            if ([_playerView isMultipleTouchEnabled]){
+                
+            }
             NSLog(@"kYTPlayerStatePlaying");
             break;
         case kYTPlayerStatePaused:

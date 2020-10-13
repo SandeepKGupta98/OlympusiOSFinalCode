@@ -64,7 +64,9 @@
 
             
             
-    NSString *url = [NSString stringWithFormat:@"https://www.olympusmyvoice.tk/api/v1/videos?auth_token=5c2b9071-a675-49b0-8fb2-9cd894da1c87&page=%ld",pageNum];
+    NSString *url = [NSString stringWithFormat:@"%@/api/v1/videos?auth_token=5c2b9071-a675-49b0-8fb2-9cd894da1c87&page=%ld",base_url,(long)pageNum];
+    
+    
     NSLog(@"URL: %@", url);
             [manager GET:url parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
                 NSLog(@"completedUnitCount: %lld \n totalUnitCount: %lld",downloadProgress.completedUnitCount, downloadProgress.totalUnitCount);
@@ -108,7 +110,8 @@
     AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc]initWithSessionConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-    NSString *url = [NSString stringWithFormat:@"https://www.olympusmyvoice.tk/api/v1/video/%@/%@?auth_token=5c2b9071-a675-49b0-8fb2-9cd894da1c87",[videoDict valueForKey:@"id"], [[[UtilsManager sharedObject] getUserDetailsFromDefaultUser] valueForKey:@"id"]];
+    NSString *url = [NSString stringWithFormat:@"%@/api/v1/video/%@/%@?auth_token=5c2b9071-a675-49b0-8fb2-9cd894da1c87",base_url,[videoDict valueForKey:@"id"], [[[UtilsManager sharedObject] getUserDetailsFromDefaultUser] valueForKey:@"id"]];
+    
 //    https://www.olympusmyvoice.tk/api/v1/video/2/25?auth_token=5c2b9071-a675-49b0-8fb2-9cd894da1c87
     [manager GET:url parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         NSLog(@"completedUnitCount: %lld \n totalUnitCount: %lld",downloadProgress.completedUnitCount, downloadProgress.totalUnitCount);
