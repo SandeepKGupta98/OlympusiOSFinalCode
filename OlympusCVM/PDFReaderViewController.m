@@ -103,6 +103,7 @@
             NSURL *pdfFileUrl = [NSURL fileURLWithPath:filePath];
             NSArray *objectsToShare = @[pdfFileUrl];
             UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:objectsToShare applicationActivities:nil];
+            activityVC.modalPresentationStyle = UIModalPresentationFullScreen;
             [self presentViewController:activityVC animated:YES completion:nil];
         }else{
             UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"" message:@"File does not exist" preferredStyle:UIAlertControllerStyleAlert];

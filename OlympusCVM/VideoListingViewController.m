@@ -26,7 +26,6 @@
     [super viewDidLoad];
     pageNum = 0;
     shouldFetchRequest = YES;
-    self.loaderView.hidden = NO;
     videoAry = [[NSMutableArray alloc] init];
 }
 
@@ -34,6 +33,7 @@
     [super viewWillAppear:animated];
     pageNum = 0;
     [videoAry removeAllObjects];
+    [self.tableView reloadData];
     [self getInboxFromServer];
 
 }
@@ -56,6 +56,10 @@
     shouldFetchRequest = NO;
 
     pageNum = pageNum+1;
+    
+    if (pageNum == 1) {
+        self.loaderView.hidden = NO;
+    }
             AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc]initWithSessionConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
             manager.requestSerializer = [AFJSONRequestSerializer serializer];
             [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
@@ -137,20 +141,21 @@
         cell = [[VideoListCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"videoListCell"];
     }
         NSDictionary *videoDict = [videoAry objectAtIndex:indexPath.row];
-//        NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
-//        dateFormatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
-//        NSDate *yourDate = [dateFormatter dateFromString:[videoDict valueForKey:@"created_at"]];
-//        dateFormatter.dateFormat = @"dd MMM yyyy";
-//        cell.videoDate.text = [dateFormatter stringFromDate:yourDate];
-    cell.videoDate.text = [videoDict valueForKey:@"created_at_readable"];
-    cell.videoName.text = [videoDict valueForKey:@"title"];
-    cell.videoDesc.text = [videoDict valueForKey:@"description"];
-    cell.viewCountLbl.text = [NSString stringWithFormat:@"%@ Views",[videoDict valueForKey:@"customers_count"]];
-    NSString *url = [videoDict valueForKey:@"url"];
-    NSString *videoId = [[UtilsManager sharedObject] extractYoutubeIdFromLink:url];
-    if (videoId != nil){
-        [cell.videoImg sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://img.youtube.com/vi/%@/hqdefault.jpg", videoId]] placeholderImage:nil];
-    }
+    //        NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
+    //        dateFormatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+    //        NSDate *yourDate = [dateFormatter dateFromString:[videoDict valueForKey:@"created_at"]];
+    //        dateFormatter.dateFormat = @"dd MMM yyyy";
+    //        cell.videoDate.text = [dateFormatter stringFromDate:yourDate];
+        cell.videoDate.text = [videoDict valueForKey:@"created_at_readable"];
+        cell.videoName.text = [videoDict valueForKey:@"title"];
+        cell.videoDesc.text = [videoDict valueForKey:@"description"];
+        cell.viewCountLbl.text = [NSString stringWithFormat:@"%@ Views",[videoDict valueForKey:@"customers_count"]];
+        NSString *url = [videoDict valueForKey:@"url"];
+        NSString *videoId = [[UtilsManager sharedObject] extractYoutubeIdFromLink:url];
+        if (videoId != nil){
+            [cell.videoImg sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://img.youtube.com/vi/%@/hqdefault.jpg", videoId]] placeholderImage:nil];
+        }
+
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
@@ -164,12 +169,14 @@
         mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
         YoutubePlayerViewController *ytPlayer=[mainStoryboard instantiateViewControllerWithIdentifier:@"youtubePlayerVC"];
         ytPlayer.videoId = videoId;
+        ytPlayer.modalPresentationStyle = UIModalPresentationFullScreen;
         [self presentViewController:ytPlayer animated:YES completion:^{}];
     }else{
         [self showAlertWithMessage:[NSString stringWithFormat:@"\n %@ ",url]];
         NSLog(@"********* Invalid Video: %@ *********",url);
     }
     [self setVideoWatchImpression:videoDict];
+
 
 }
 

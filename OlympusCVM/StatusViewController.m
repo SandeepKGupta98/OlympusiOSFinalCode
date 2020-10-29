@@ -1797,7 +1797,7 @@
         if (![[self.requestInfo valueForKey:@"remarks"] isKindOfClass:[NSNull class]]) {
             fpvc.requestRemark =  [self.requestInfo valueForKey:@"remarks"];
         }
-
+        fpvc.modalPresentationStyle = UIModalPresentationFullScreen;
         [self presentViewController:fpvc animated:YES completion:^{
         }];
     } else {
@@ -1820,6 +1820,7 @@
             if (![[self.requestInfo valueForKey:@"remarks"] isKindOfClass:[NSNull class]]) {
                 fpvc.requestRemark =  [self.requestInfo valueForKey:@"remarks"];
             }
+            fpvc.modalPresentationStyle = UIModalPresentationFullScreen;
             [self presentViewController:fpvc animated:YES completion:^{
             }];
         }];
@@ -1861,6 +1862,7 @@
         MFMailComposeViewController *composeVC = [[MFMailComposeViewController alloc] init];
         composeVC.mailComposeDelegate = self;
         [composeVC setToRecipients:[NSArray arrayWithObject:@"abc@gmail.com"]];
+        composeVC.modalPresentationStyle = UIModalPresentationFullScreen;
         [self presentViewController:composeVC animated:YES completion:nil];
         
     }else{

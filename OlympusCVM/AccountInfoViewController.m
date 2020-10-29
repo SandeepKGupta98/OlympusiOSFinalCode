@@ -207,6 +207,7 @@
             }
             HospitalsViewController *hospitalsVC = [mainStoryboard instantiateViewControllerWithIdentifier:@"hospitalsVC"];
             hospitalsVC.delegate = self;
+            hospitalsVC.modalPresentationStyle = UIModalPresentationFullScreen;
             [self presentViewController:hospitalsVC animated:NO completion:nil];
             return NO;
         }
@@ -708,6 +709,7 @@
     }
     HospitalsViewController *hospitalsVC = [mainStoryboard instantiateViewControllerWithIdentifier:@"hospitalsVC"];
     hospitalsVC.delegate = self;
+    hospitalsVC.modalPresentationStyle = UIModalPresentationFullScreen;
     [self presentViewController:hospitalsVC animated:NO completion:nil];
 }
 
@@ -975,6 +977,7 @@
         HospitalsViewController *hospitalsVC = [mainStoryboard instantiateViewControllerWithIdentifier:@"hospitalsVC"];
         hospitalsVC.delegate = self;
         hospitalsVC.hosInfo = [NSMutableDictionary dictionaryWithDictionary:hosInfo];
+        hospitalsVC.modalPresentationStyle = UIModalPresentationFullScreen;
         [self presentViewController:hospitalsVC animated:NO completion:nil];
 
     }];

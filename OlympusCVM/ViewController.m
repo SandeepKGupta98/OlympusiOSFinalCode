@@ -11,6 +11,7 @@
 #import "UtilsManager.h"
 #import "FeedbackViewController.h"
 #import "VideoListingViewController.h"
+#import "UIViewController+Presentation.h"
 
 #define screen_hgt ([[UIScreen mainScreen] bounds].size.height)
 #define screen_wdth ([[UIScreen mainScreen] bounds].size.width)
@@ -172,6 +173,7 @@
         if (![[requestInfo valueForKey:@"remarks"] isKindOfClass:[NSNull class]]) {
             fpvc.requestRemark =  [requestInfo valueForKey:@"remarks"];
         }
+        fpvc.modalPresentationStyle = UIModalPresentationFullScreen;
         [self presentViewController:fpvc animated:YES completion:^{}];
 
     }
@@ -200,6 +202,7 @@
         loginVC.delegate = self;
         UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:loginVC];
         nav.navigationBar.hidden = YES;
+        nav.modalPresentationStyle = UIModalPresentationFullScreen;
         [self presentViewController:nav animated:YES completion:nil];
         return NO;
     }
@@ -295,6 +298,7 @@
         loginVC.delegate = self;
         UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:loginVC];
         nav.navigationBar.hidden = YES;
+        nav.modalPresentationStyle = UIModalPresentationFullScreen;
         [self presentViewController:nav animated:YES completion:nil];
     }
 }
@@ -334,6 +338,7 @@
         loginVC.delegate = self;
         UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:loginVC];
         nav.navigationBar.hidden = YES;
+        nav.modalPresentationStyle = UIModalPresentationFullScreen;
         [self presentViewController:nav animated:YES completion:nil];
     }
 }
@@ -370,6 +375,7 @@
         loginVC.delegate = self;
         UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:loginVC];
         nav.navigationBar.hidden = YES;
+        nav.modalPresentationStyle = UIModalPresentationFullScreen;
         [self presentViewController:nav animated:YES completion:nil];
     }
 }
@@ -403,6 +409,7 @@
         loginVC.delegate = self;
         UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:loginVC];
         nav.navigationBar.hidden = YES;
+        nav.modalPresentationStyle = UIModalPresentationFullScreen;
         [self presentViewController:nav animated:YES completion:nil];
     }
 }

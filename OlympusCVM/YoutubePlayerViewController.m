@@ -8,6 +8,7 @@
 
 #import "YoutubePlayerViewController.h"
 #import "YTPlayerView+Mute_unMute.h"
+#import <AVFoundation/AVFoundation.h>
 
 //#define SampleVideoURL @"https://www.youtube.com/watch?v=EngW7tLk6R8"
 #define SampleVideoURL @"https://www.youtube.com/watch?v=y7Ulq5dvTpo"
@@ -23,7 +24,7 @@
     [super viewDidLoad];
     self.playerView.delegate = self;
     [self.optionView setHidden:YES];
-
+    [self setupAudioSession];
 //    NSString *videoId = [[UtilsManager sharedObject] extractYoutubeIdFromLink:SampleVideoURL];
     if (self.videoId) {
         activityView = [[UIActivityIndicatorView alloc] init];
@@ -58,6 +59,15 @@
 
 }
 
+-(void)setupAudioSession{
+    AVAudioSession *audioSession = [AVAudioSession sharedInstance];
+    BOOL flag;
+    NSError *setCategoryError = nil;
+    flag = [audioSession setCategory:AVAudioSessionCategoryPlayback
+                         error:&setCategoryError];
+    NSLog(@"Flag: %d",flag);
+    NSLog(@"Error: %@",setCategoryError.localizedDescription);
+}
 
 -(void)playerViewDidBecomeReady:(YTPlayerView *)playerView{
     [self.playerView playVideo];
@@ -141,10 +151,10 @@
     return [UIColor redColor];
 }
 -(void)hideVC{
+    [self.playerView stopVideo];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 -(IBAction)crossButtonTapped:(id)sender{
-    [self.playerView stopVideo];
     [self hideVC];
 }
 
