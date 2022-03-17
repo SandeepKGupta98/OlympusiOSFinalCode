@@ -29,10 +29,10 @@
     [self addGestureRecognizer:tapGes];
 }
 -(void)logoImageTapped{
-    NSString *url = @"https://www.olympus-global.com/features/100years/";
-    if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:url]]) {
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
-    }
+//    NSString *url = @"https://www.olympus-global.com/features/100years/";
+//    if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:url]]) {
+//        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
+//    }
 }
 
 @end

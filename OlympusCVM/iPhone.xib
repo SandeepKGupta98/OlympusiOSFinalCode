@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -15,21 +13,43 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SplashScreen4.png" translatesAutoresizingMaskIntoConstraints="NO" id="M98-xj-1Oy">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SplashScreen5.png" translatesAutoresizingMaskIntoConstraints="NO" id="M98-xj-1Oy">
+                    <rect key="frame" x="0.0" y="90" width="375" height="577"/>
                 </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1VJ-L6-chl">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="olympus_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="2Mk-P6-608">
+                            <rect key="frame" x="97.5" y="49" width="180" height="31"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="180" id="81j-NZ-wXI"/>
+                                <constraint firstAttribute="height" constant="31" id="zwy-Vy-omn"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.039215686274509803" green="0.062745098039215685" blue="0.46666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="2Mk-P6-608" firstAttribute="centerX" secondItem="1VJ-L6-chl" secondAttribute="centerX" id="7Tb-NI-gA4"/>
+                        <constraint firstAttribute="bottom" secondItem="2Mk-P6-608" secondAttribute="bottom" constant="10" id="Akf-0g-EZf"/>
+                        <constraint firstAttribute="height" constant="90" id="FAd-mi-ATb"/>
+                    </constraints>
+                </view>
             </subviews>
             <constraints>
+                <constraint firstItem="M98-xj-1Oy" firstAttribute="top" secondItem="1VJ-L6-chl" secondAttribute="bottom" id="0gz-M4-GLU"/>
                 <constraint firstItem="M98-xj-1Oy" firstAttribute="leading" secondItem="jqF-7R-l5m" secondAttribute="leading" id="673-v0-bsf"/>
-                <constraint firstItem="M98-xj-1Oy" firstAttribute="top" secondItem="jqF-7R-l5m" secondAttribute="top" id="EQJ-5q-A0W"/>
+                <constraint firstItem="1VJ-L6-chl" firstAttribute="top" secondItem="jqF-7R-l5m" secondAttribute="top" id="DtS-2G-bOw"/>
+                <constraint firstAttribute="trailing" secondItem="1VJ-L6-chl" secondAttribute="trailing" id="dsh-3g-eYa"/>
                 <constraint firstAttribute="bottom" secondItem="M98-xj-1Oy" secondAttribute="bottom" id="nSl-LB-ciZ"/>
                 <constraint firstAttribute="trailing" secondItem="M98-xj-1Oy" secondAttribute="trailing" id="r6Z-fk-Evd"/>
+                <constraint firstItem="1VJ-L6-chl" firstAttribute="leading" secondItem="jqF-7R-l5m" secondAttribute="leading" id="tTT-0j-P0e"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
-            <point key="canvasLocation" x="-166" y="-331"/>
+            <point key="canvasLocation" x="-167.19999999999999" y="-331.48425787106447"/>
         </view>
     </objects>
     <resources>
-        <image name="SplashScreen4.png" width="750" height="1334"/>
+        <image name="SplashScreen5.png" width="750" height="1334"/>
+        <image name="olympus_logo.png" width="1759" height="331"/>
     </resources>
 </document>
