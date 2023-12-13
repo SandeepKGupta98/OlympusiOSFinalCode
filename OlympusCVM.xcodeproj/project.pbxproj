@@ -19,6 +19,8 @@
 		18BAECB625230B4C0098B9B9 /* YTPlayerView+Mute_unMute.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BAECB525230B4C0098B9B9 /* YTPlayerView+Mute_unMute.m */; };
 		2C171D3F27BA885B0040A1DB /* SplashScreen_iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C171D3E27BA885B0040A1DB /* SplashScreen_iphone.png */; };
 		2C8FE6F127BB8164003CFFE0 /* SplashScreen5.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C8FE6F027BB8163003CFFE0 /* SplashScreen5.png */; };
+		2CE201282AB88B3700C5566D /* DepartmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE201272AB88B3700C5566D /* DepartmentViewController.m */; };
+		3D3A5728A10C085B985A3937 /* libPods-OlympusCVM.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A7A1F40661B9D5F21FB20932 /* libPods-OlympusCVM.a */; };
 		4B0AA5FC21D616640048749E /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B0AA5FB21D616610048749E /* user.png */; };
 		4B0AA60021D645360048749E /* list.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B0AA5FF21D645320048749E /* list.png */; };
 		4B0AFAF0208884CE007FFF17 /* sidemenu_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B0AFAEF208884CB007FFF17 /* sidemenu_logo.png */; };
@@ -288,9 +290,8 @@
 		4BF6B63020876EA800DE934C /* frame_26_delay-0.1s.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4BF6B61320876EA800DE934C /* frame_26_delay-0.1s.gif */; };
 		4BF6B63120876EA800DE934C /* frame_27_delay-0.1s.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4BF6B61420876EA800DE934C /* frame_27_delay-0.1s.gif */; };
 		4BF6B63220876EA800DE934C /* frame_28_delay-0.1s.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4BF6B61520876EA800DE934C /* frame_28_delay-0.1s.gif */; };
-		6B4E8E6D0659FAE40E588A1C /* libPods-OlympusCVMUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 10E6E4F7EC909287E4653F96 /* libPods-OlympusCVMUITests.a */; };
-		73910C7962BA3D428A28DA10 /* libPods-OlympusCVM.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 81B5BA0CC086EDA3391EFA5D /* libPods-OlympusCVM.a */; };
-		D87DC9AD37F0ADDFCCF8B15C /* libPods-OlympusCVMTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7BA46A1AFAD85676D48CD6 /* libPods-OlympusCVMTests.a */; };
+		59B9073BD39FF0591731FB1D /* libPods-OlympusCVMTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FA307733A7F898A43D992B7 /* libPods-OlympusCVMTests.a */; };
+		6EB7EB8D8393E304CE4DA274 /* libPods-OlympusCVMUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 612A728585AB2DBF574AE798 /* libPods-OlympusCVMUITests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -311,7 +312,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		10E6E4F7EC909287E4653F96 /* libPods-OlympusCVMUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OlympusCVMUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		148CA1E2CC02CF82DAD25FF6 /* Pods-OlympusCVMUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OlympusCVMUITests.debug.xcconfig"; path = "Target Support Files/Pods-OlympusCVMUITests/Pods-OlympusCVMUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		1829B9FF24FF669000FE7885 /* pdf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pdf.png; sourceTree = "<group>"; };
 		1829BA0124FF672100FE7885 /* avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatar.png; sourceTree = "<group>"; };
 		1879077324FFA446006CF980 /* UIViewController+Presentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Presentation.h"; sourceTree = "<group>"; };
@@ -326,10 +327,10 @@
 		187907812502253C006CF980 /* new_video_w.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = new_video_w.png; sourceTree = "<group>"; };
 		18BAECB425230B4C0098B9B9 /* YTPlayerView+Mute_unMute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "YTPlayerView+Mute_unMute.h"; sourceTree = "<group>"; };
 		18BAECB525230B4C0098B9B9 /* YTPlayerView+Mute_unMute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "YTPlayerView+Mute_unMute.m"; sourceTree = "<group>"; };
-		291B9F985F64CEE240CD72FB /* Pods-OlympusCVMUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OlympusCVMUITests.debug.xcconfig"; path = "Target Support Files/Pods-OlympusCVMUITests/Pods-OlympusCVMUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		2C171D3E27BA885B0040A1DB /* SplashScreen_iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SplashScreen_iphone.png; sourceTree = "<group>"; };
 		2C8FE6F027BB8163003CFFE0 /* SplashScreen5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SplashScreen5.png; sourceTree = "<group>"; };
-		31B1E6E355A6828EAA7E49EB /* Pods-OlympusCVMTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OlympusCVMTests.debug.xcconfig"; path = "Target Support Files/Pods-OlympusCVMTests/Pods-OlympusCVMTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2CE201262AB88B3700C5566D /* DepartmentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DepartmentViewController.h; sourceTree = "<group>"; };
+		2CE201272AB88B3700C5566D /* DepartmentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DepartmentViewController.m; sourceTree = "<group>"; };
 		4B0AA5FB21D616610048749E /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
 		4B0AA5FF21D645320048749E /* list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = list.png; sourceTree = "<group>"; };
 		4B0AFAEF208884CB007FFF17 /* sidemenu_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sidemenu_logo.png; sourceTree = "<group>"; };
@@ -677,12 +678,14 @@
 		4BF6B61320876EA800DE934C /* frame_26_delay-0.1s.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "frame_26_delay-0.1s.gif"; sourceTree = "<group>"; };
 		4BF6B61420876EA800DE934C /* frame_27_delay-0.1s.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "frame_27_delay-0.1s.gif"; sourceTree = "<group>"; };
 		4BF6B61520876EA800DE934C /* frame_28_delay-0.1s.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "frame_28_delay-0.1s.gif"; sourceTree = "<group>"; };
-		4F23DBF429FA79DB2C38DF8D /* Pods-OlympusCVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OlympusCVM.debug.xcconfig"; path = "Target Support Files/Pods-OlympusCVM/Pods-OlympusCVM.debug.xcconfig"; sourceTree = "<group>"; };
-		60F4464BBE538F5110BF5AA3 /* Pods-OlympusCVMUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OlympusCVMUITests.release.xcconfig"; path = "Target Support Files/Pods-OlympusCVMUITests/Pods-OlympusCVMUITests.release.xcconfig"; sourceTree = "<group>"; };
-		6E7BA46A1AFAD85676D48CD6 /* libPods-OlympusCVMTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OlympusCVMTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		81B5BA0CC086EDA3391EFA5D /* libPods-OlympusCVM.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OlympusCVM.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		93AA4F6F9E335C6F7FCA0EAF /* Pods-OlympusCVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OlympusCVM.release.xcconfig"; path = "Target Support Files/Pods-OlympusCVM/Pods-OlympusCVM.release.xcconfig"; sourceTree = "<group>"; };
-		DE9CA605E51A14DF0081964D /* Pods-OlympusCVMTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OlympusCVMTests.release.xcconfig"; path = "Target Support Files/Pods-OlympusCVMTests/Pods-OlympusCVMTests.release.xcconfig"; sourceTree = "<group>"; };
+		5B07CAA3FD07F929D8BCE07F /* Pods-OlympusCVMTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OlympusCVMTests.debug.xcconfig"; path = "Target Support Files/Pods-OlympusCVMTests/Pods-OlympusCVMTests.debug.xcconfig"; sourceTree = "<group>"; };
+		612A728585AB2DBF574AE798 /* libPods-OlympusCVMUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OlympusCVMUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FA307733A7F898A43D992B7 /* libPods-OlympusCVMTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OlympusCVMTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2DFBBBBFF43FC589E0D8B90 /* Pods-OlympusCVMTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OlympusCVMTests.release.xcconfig"; path = "Target Support Files/Pods-OlympusCVMTests/Pods-OlympusCVMTests.release.xcconfig"; sourceTree = "<group>"; };
+		A7A1F40661B9D5F21FB20932 /* libPods-OlympusCVM.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OlympusCVM.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3C88F557C8864A36859860D /* Pods-OlympusCVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OlympusCVM.debug.xcconfig"; path = "Target Support Files/Pods-OlympusCVM/Pods-OlympusCVM.debug.xcconfig"; sourceTree = "<group>"; };
+		D6B3E60CAA2A31A028ACB2BD /* Pods-OlympusCVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OlympusCVM.release.xcconfig"; path = "Target Support Files/Pods-OlympusCVM/Pods-OlympusCVM.release.xcconfig"; sourceTree = "<group>"; };
+		F788F74DE62203681669EF06 /* Pods-OlympusCVMUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OlympusCVMUITests.release.xcconfig"; path = "Target Support Files/Pods-OlympusCVMUITests/Pods-OlympusCVMUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -690,7 +693,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73910C7962BA3D428A28DA10 /* libPods-OlympusCVM.a in Frameworks */,
+				3D3A5728A10C085B985A3937 /* libPods-OlympusCVM.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -698,7 +701,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D87DC9AD37F0ADDFCCF8B15C /* libPods-OlympusCVMTests.a in Frameworks */,
+				59B9073BD39FF0591731FB1D /* libPods-OlympusCVMTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -706,22 +709,252 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B4E8E6D0659FAE40E588A1C /* libPods-OlympusCVMUITests.a in Frameworks */,
+				6EB7EB8D8393E304CE4DA274 /* libPods-OlympusCVMUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C2C3A5029767EC200516352 /* Login Classes */ = {
+			isa = PBXGroup;
+			children = (
+				4B83A4861FEA288100E887E9 /* LoginViewController.h */,
+				4B83A4871FEA288100E887E9 /* LoginViewController.m */,
+			);
+			path = "Login Classes";
+			sourceTree = "<group>";
+		};
+		2CA834CC297FCFF1005E530D /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				4BDAEB2022C9D9C800E517B4 /* HundredYearLogo.h */,
+				4BDAEB2122C9D9C800E517B4 /* HundredYearLogo.m */,
+				4B623EB220452AC9001B9ADE /* UtilsManager.h */,
+				4B623EB320452ACA001B9ADE /* UtilsManager.m */,
+				4B83A44D1FE98CA200E887E9 /* AppDelegate.h */,
+				4B83A44E1FE98CA200E887E9 /* AppDelegate.m */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		2CA834CD297FD017005E530D /* BorderSegments */ = {
+			isa = PBXGroup;
+			children = (
+				4B7DB5132091F89C00532D53 /* UISegmentedControl+WithoutBorder.h */,
+				4B7DB5142091F89C00532D53 /* UISegmentedControl+WithoutBorder.m */,
+			);
+			path = BorderSegments;
+			sourceTree = "<group>";
+		};
+		2CA834CE297FD029005E530D /* PopUp */ = {
+			isa = PBXGroup;
+			children = (
+				4BBA808422B8B222004C7CFC /* PopupViewController.h */,
+				4BBA808522B8B222004C7CFC /* PopupViewController.m */,
+				4BBA808622B8B222004C7CFC /* PopupViewController.xib */,
+			);
+			path = PopUp;
+			sourceTree = "<group>";
+		};
+		2CA834CF297FD042005E530D /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				4B3212C721CAD0CD0013A31F /* SDWebImage */,
+				4B1E062820B2AA0E0027F6FE /* AFNetworking */,
+				4B8F08C520963EEC000DB2FA /* TTTAttributedLabel */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		2CA834D0297FD066005E530D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				4B83A4501FE98CA200E887E9 /* ViewController.h */,
+				4B83A4511FE98CA200E887E9 /* ViewController.m */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		2CA834D1297FD0F1005E530D /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				2CA834D9297FD22D005E530D /* RequestFeedback */,
+				2CA834D4297FD13E005E530D /* RequestEscalation */,
+				2CA834D3297FD125005E530D /* ExistingRequest */,
+				2CA834D2297FD109005E530D /* NewRequest */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		2CA834D2297FD109005E530D /* NewRequest */ = {
+			isa = PBXGroup;
+			children = (
+				4BED21E42006328700287F9F /* OptionsViewController.h */,
+				4BED21E52006328700287F9F /* OptionsViewController.m */,
+				4B6923B6203AE61200ECF2C7 /* RemarksViewController.h */,
+				4B6923B7203AE61200ECF2C7 /* RemarksViewController.m */,
+				4BED21E72006720F00287F9F /* ThankYouViewController.h */,
+				4BED21E82006720F00287F9F /* ThankYouViewController.m */,
+			);
+			path = NewRequest;
+			sourceTree = "<group>";
+		};
+		2CA834D3297FD125005E530D /* ExistingRequest */ = {
+			isa = PBXGroup;
+			children = (
+				4BD6AB22206A577100E6F01D /* ExistingRequestViewController.h */,
+				4BD6AB23206A577100E6F01D /* ExistingRequestViewController.m */,
+				4B7DB4F22091E55300532D53 /* HistoryOptionViewController.h */,
+				4B7DB4F32091E55300532D53 /* HistoryOptionViewController.m */,
+				4B5CC89E2041E30600712014 /* HistoryViewController.h */,
+				4B5CC89F2041E30700712014 /* HistoryViewController.m */,
+				4BED21EA20067D6000287F9F /* StatusViewController.h */,
+				4BED21EB20067D6000287F9F /* StatusViewController.m */,
+			);
+			path = ExistingRequest;
+			sourceTree = "<group>";
+		};
+		2CA834D4297FD13E005E530D /* RequestEscalation */ = {
+			isa = PBXGroup;
+			children = (
+				4BDE8E9520BEC452004200F3 /* RequestEscalationViewController.h */,
+				4BDE8E9620BEC452004200F3 /* RequestEscalationViewController.m */,
+			);
+			path = RequestEscalation;
+			sourceTree = "<group>";
+		};
+		2CA834D5297FD167005E530D /* UserAccount */ = {
+			isa = PBXGroup;
+			children = (
+				2CA834D6297FD192005E530D /* ResetPassword */,
+				4B83A4C81FEA60FD00E887E9 /* SignUpViewController.h */,
+				4B83A4C91FEA60FD00E887E9 /* SignUpViewController.m */,
+				4B1785A52043D5570007E21A /* AccountInfoViewController.h */,
+				4B1785A62043D5570007E21A /* AccountInfoViewController.m */,
+				4B623EAF204525DA001B9ADE /* AccountSummaryViewController.h */,
+				4B623EB0204525DA001B9ADE /* AccountSummaryViewController.m */,
+				4B623EB820453F23001B9ADE /* RegistrationFinalViewController.h */,
+				4B623EB920453F23001B9ADE /* RegistrationFinalViewController.m */,
+			);
+			path = UserAccount;
+			sourceTree = "<group>";
+		};
+		2CA834D6297FD192005E530D /* ResetPassword */ = {
+			isa = PBXGroup;
+			children = (
+				4BDE8EAC20C251A3004200F3 /* ForgetPassViewController.h */,
+				4BDE8EAD20C251A3004200F3 /* ForgetPassViewController.m */,
+				4BDE8EAF20C272E1004200F3 /* ConfirmPwdViewController.h */,
+				4BDE8EB020C272E2004200F3 /* ConfirmPwdViewController.m */,
+				4B623EB52045386D001B9ADE /* OTPViewController.h */,
+				4B623EB62045386D001B9ADE /* OTPViewController.m */,
+			);
+			path = ResetPassword;
+			sourceTree = "<group>";
+		};
+		2CA834D7297FD1C9005E530D /* OtherClasses */ = {
+			isa = PBXGroup;
+			children = (
+				1879077324FFA446006CF980 /* UIViewController+Presentation.h */,
+				1879077424FFA447006CF980 /* UIViewController+Presentation.m */,
+				4BF6B5EC2087201400DE934C /* VideoGIFViewController.h */,
+				4BF6B5ED2087201400DE934C /* VideoGIFViewController.m */,
+				4BF6B5D12085BFC200DE934C /* SideMenuViewController.h */,
+				4BF6B5D22085BFC200DE934C /* SideMenuViewController.m */,
+				4BF6B5E02085D50000DE934C /* TutorialViewController.h */,
+				4BF6B5E12085D50000DE934C /* TutorialViewController.m */,
+				4B8AABBF2091B3FA0049FC12 /* FirstTutorialViewController.h */,
+				4B8AABC02091B3FA0049FC12 /* FirstTutorialViewController.m */,
+				4BF6B5E32085D52000DE934C /* PrivacyPolicyViewController.h */,
+				4BF6B5E42085D52000DE934C /* PrivacyPolicyViewController.m */,
+				4BF6B5E62085D53500DE934C /* TermsofUseViewController.h */,
+				4BF6B5E72085D53500DE934C /* TermsofUseViewController.m */,
+				4B96FA9B21DCD149006BE806 /* PDFReaderViewController.h */,
+				4B96FA9C21DCD149006BE806 /* PDFReaderViewController.m */,
+				4B13D64F22CCEF9F00E74311 /* AboutViewController.h */,
+				4B13D65022CCEF9F00E74311 /* AboutViewController.m */,
+			);
+			path = OtherClasses;
+			sourceTree = "<group>";
+		};
+		2CA834D8297FD213005E530D /* Hospitals&Department */ = {
+			isa = PBXGroup;
+			children = (
+				4B58D12B207F5C0F00FF5657 /* HospitalsViewController.h */,
+				4B58D12C207F5C0F00FF5657 /* HospitalsViewController.m */,
+				2CE201262AB88B3700C5566D /* DepartmentViewController.h */,
+				2CE201272AB88B3700C5566D /* DepartmentViewController.m */,
+			);
+			path = "Hospitals&Department";
+			sourceTree = "<group>";
+		};
+		2CA834D9297FD22D005E530D /* RequestFeedback */ = {
+			isa = PBXGroup;
+			children = (
+				4B3CE6DB20C543EC001B72B0 /* FeedbackViewController.h */,
+				4B3CE6DC20C543EC001B72B0 /* FeedbackViewController.m */,
+			);
+			path = RequestFeedback;
+			sourceTree = "<group>";
+		};
+		2CA834DA297FD23E005E530D /* Promailer */ = {
+			isa = PBXGroup;
+			children = (
+				4B3212C421CAB4BF0013A31F /* InboxViewController.h */,
+				4B3212C521CAB4BF0013A31F /* InboxViewController.m */,
+				4B5BC48221CB755900DA36B9 /* InboxDetailViewController.h */,
+				4B5BC48321CB755900DA36B9 /* InboxDetailViewController.m */,
+			);
+			path = Promailer;
+			sourceTree = "<group>";
+		};
+		2CA834DB297FD285005E530D /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+				18BAECB425230B4C0098B9B9 /* YTPlayerView+Mute_unMute.h */,
+				18BAECB525230B4C0098B9B9 /* YTPlayerView+Mute_unMute.m */,
+				1879077624FFAC78006CF980 /* VideoListingViewController.h */,
+				1879077724FFAC78006CF980 /* VideoListingViewController.m */,
+				187907792500F034006CF980 /* YoutubePlayerViewController.h */,
+				1879077A2500F034006CF980 /* YoutubePlayerViewController.m */,
+			);
+			path = Videos;
+			sourceTree = "<group>";
+		};
+		2CA834DC297FD2C2005E530D /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				1829BA0124FF672100FE7885 /* avatar.png */,
+				1829B9FF24FF669000FE7885 /* pdf.png */,
+				4B13D65422CD169F00E74311 /* image1.jpg */,
+				4B13D65622CD16EB00E74311 /* image2.jpg */,
+				4B13D65822CD174A00E74311 /* image3.jpg */,
+				4B13D65222CD15B000E74311 /* image4.jpg */,
+				4B13D65A22CD1F1200E74311 /* image5.png */,
+				4B13D65C22CD1F3C00E74311 /* image6.jpg */,
+				4B13D66022CD1F6400E74311 /* image8.png */,
+				4B13D65E22CD1F5800E74311 /* image7.jpg */,
+				4B78648D22CF0F2E0071F080 /* image9.png */,
+				4B78648F22CF0FEC0071F080 /* image10.png */,
+				4B9D91CD22C25C0400BCD55A /* service_banner.jpg */,
+				4B9D91CF22C25E8B00BCD55A /* servicebanner.jpg */,
+				4B78649122CF19400071F080 /* down_arrow.png */,
+				4BD0228522C0AA7C004CC165 /* P5030371.jpg */,
+				4BD0228722C0AB31004CC165 /* academic_banner.jpg */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		33E2DCF699FD1FCD44956161 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4F23DBF429FA79DB2C38DF8D /* Pods-OlympusCVM.debug.xcconfig */,
-				93AA4F6F9E335C6F7FCA0EAF /* Pods-OlympusCVM.release.xcconfig */,
-				31B1E6E355A6828EAA7E49EB /* Pods-OlympusCVMTests.debug.xcconfig */,
-				DE9CA605E51A14DF0081964D /* Pods-OlympusCVMTests.release.xcconfig */,
-				291B9F985F64CEE240CD72FB /* Pods-OlympusCVMUITests.debug.xcconfig */,
-				60F4464BBE538F5110BF5AA3 /* Pods-OlympusCVMUITests.release.xcconfig */,
+				B3C88F557C8864A36859860D /* Pods-OlympusCVM.debug.xcconfig */,
+				D6B3E60CAA2A31A028ACB2BD /* Pods-OlympusCVM.release.xcconfig */,
+				5B07CAA3FD07F929D8BCE07F /* Pods-OlympusCVMTests.debug.xcconfig */,
+				A2DFBBBBFF43FC589E0D8B90 /* Pods-OlympusCVMTests.release.xcconfig */,
+				148CA1E2CC02CF82DAD25FF6 /* Pods-OlympusCVMUITests.debug.xcconfig */,
+				F788F74DE62203681669EF06 /* Pods-OlympusCVMUITests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -889,7 +1122,7 @@
 				4B83A46E1FE98CA200E887E9 /* OlympusCVMUITests */,
 				4B83A4481FE98CA200E887E9 /* Products */,
 				33E2DCF699FD1FCD44956161 /* Pods */,
-				578874CAEDCC37DF19590A30 /* Frameworks */,
+				512CD9A161EB0FDB359DEB8F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -906,108 +1139,24 @@
 		4B83A4491FE98CA200E887E9 /* OlympusCVM */ = {
 			isa = PBXGroup;
 			children = (
-				18BAECB425230B4C0098B9B9 /* YTPlayerView+Mute_unMute.h */,
-				18BAECB525230B4C0098B9B9 /* YTPlayerView+Mute_unMute.m */,
-				1829BA0124FF672100FE7885 /* avatar.png */,
-				1829B9FF24FF669000FE7885 /* pdf.png */,
-				4B13D65422CD169F00E74311 /* image1.jpg */,
-				4B13D65622CD16EB00E74311 /* image2.jpg */,
-				4B13D65822CD174A00E74311 /* image3.jpg */,
-				4B13D65222CD15B000E74311 /* image4.jpg */,
-				4B13D65A22CD1F1200E74311 /* image5.png */,
-				4B13D65C22CD1F3C00E74311 /* image6.jpg */,
-				4B13D66022CD1F6400E74311 /* image8.png */,
-				4B13D65E22CD1F5800E74311 /* image7.jpg */,
-				4B78648D22CF0F2E0071F080 /* image9.png */,
-				4B78648F22CF0FEC0071F080 /* image10.png */,
-				4B9D91CD22C25C0400BCD55A /* service_banner.jpg */,
-				4B9D91CF22C25E8B00BCD55A /* servicebanner.jpg */,
-				4B78649122CF19400071F080 /* down_arrow.png */,
-				4BD0228522C0AA7C004CC165 /* P5030371.jpg */,
-				4BD0228722C0AB31004CC165 /* academic_banner.jpg */,
-				1879077324FFA446006CF980 /* UIViewController+Presentation.h */,
-				1879077424FFA447006CF980 /* UIViewController+Presentation.m */,
+				2CA834DC297FD2C2005E530D /* Images */,
 				4B8A837B20C682AF0000CFEF /* OlympusCVM.entitlements */,
-				4B3212C721CAD0CD0013A31F /* SDWebImage */,
-				4B1E062820B2AA0E0027F6FE /* AFNetworking */,
-				4B8F08C520963EEC000DB2FA /* TTTAttributedLabel */,
 				4BF6B5D52085C4AE00DE934C /* MFSideMenu */,
-				4B623EB220452AC9001B9ADE /* UtilsManager.h */,
-				4B623EB320452ACA001B9ADE /* UtilsManager.m */,
-				4B7DB5132091F89C00532D53 /* UISegmentedControl+WithoutBorder.h */,
-				4B7DB5142091F89C00532D53 /* UISegmentedControl+WithoutBorder.m */,
-				4BBA808422B8B222004C7CFC /* PopupViewController.h */,
-				4BBA808522B8B222004C7CFC /* PopupViewController.m */,
-				4BBA808622B8B222004C7CFC /* PopupViewController.xib */,
-				4BDAEB2022C9D9C800E517B4 /* HundredYearLogo.h */,
-				4BDAEB2122C9D9C800E517B4 /* HundredYearLogo.m */,
+				2CA834CF297FD042005E530D /* Library */,
+				2CA834CC297FCFF1005E530D /* Helper */,
+				2CA834CD297FD017005E530D /* BorderSegments */,
+				2CA834CE297FD029005E530D /* PopUp */,
 				4B43C98A208EFB5D00F8C235 /* EncodeSansNormal */,
 				4B83A4911FEA520400E887E9 /* roboto font */,
 				4B83A4831FEA275B00E887E9 /* Images */,
-				4B83A44D1FE98CA200E887E9 /* AppDelegate.h */,
-				4B83A44E1FE98CA200E887E9 /* AppDelegate.m */,
-				4BF6B5EC2087201400DE934C /* VideoGIFViewController.h */,
-				4BF6B5ED2087201400DE934C /* VideoGIFViewController.m */,
-				4BF6B5D12085BFC200DE934C /* SideMenuViewController.h */,
-				4BF6B5D22085BFC200DE934C /* SideMenuViewController.m */,
-				4BF6B5E02085D50000DE934C /* TutorialViewController.h */,
-				4BF6B5E12085D50000DE934C /* TutorialViewController.m */,
-				4B8AABBF2091B3FA0049FC12 /* FirstTutorialViewController.h */,
-				4B8AABC02091B3FA0049FC12 /* FirstTutorialViewController.m */,
-				4BF6B5E32085D52000DE934C /* PrivacyPolicyViewController.h */,
-				4BF6B5E42085D52000DE934C /* PrivacyPolicyViewController.m */,
-				4BF6B5E62085D53500DE934C /* TermsofUseViewController.h */,
-				4BF6B5E72085D53500DE934C /* TermsofUseViewController.m */,
-				4B83A4501FE98CA200E887E9 /* ViewController.h */,
-				4B83A4511FE98CA200E887E9 /* ViewController.m */,
-				1879077624FFAC78006CF980 /* VideoListingViewController.h */,
-				1879077724FFAC78006CF980 /* VideoListingViewController.m */,
-				187907792500F034006CF980 /* YoutubePlayerViewController.h */,
-				1879077A2500F034006CF980 /* YoutubePlayerViewController.m */,
-				4B83A4861FEA288100E887E9 /* LoginViewController.h */,
-				4B83A4871FEA288100E887E9 /* LoginViewController.m */,
-				4BDE8EAC20C251A3004200F3 /* ForgetPassViewController.h */,
-				4BDE8EAD20C251A3004200F3 /* ForgetPassViewController.m */,
-				4BDE8EAF20C272E1004200F3 /* ConfirmPwdViewController.h */,
-				4BDE8EB020C272E2004200F3 /* ConfirmPwdViewController.m */,
-				4B83A4C81FEA60FD00E887E9 /* SignUpViewController.h */,
-				4B83A4C91FEA60FD00E887E9 /* SignUpViewController.m */,
-				4BED21E42006328700287F9F /* OptionsViewController.h */,
-				4BED21E52006328700287F9F /* OptionsViewController.m */,
-				4BD6AB22206A577100E6F01D /* ExistingRequestViewController.h */,
-				4BD6AB23206A577100E6F01D /* ExistingRequestViewController.m */,
-				4B6923B6203AE61200ECF2C7 /* RemarksViewController.h */,
-				4B6923B7203AE61200ECF2C7 /* RemarksViewController.m */,
-				4BED21E72006720F00287F9F /* ThankYouViewController.h */,
-				4BED21E82006720F00287F9F /* ThankYouViewController.m */,
-				4B7DB4F22091E55300532D53 /* HistoryOptionViewController.h */,
-				4B7DB4F32091E55300532D53 /* HistoryOptionViewController.m */,
-				4B5CC89E2041E30600712014 /* HistoryViewController.h */,
-				4B5CC89F2041E30700712014 /* HistoryViewController.m */,
-				4BED21EA20067D6000287F9F /* StatusViewController.h */,
-				4BED21EB20067D6000287F9F /* StatusViewController.m */,
-				4BDE8E9520BEC452004200F3 /* RequestEscalationViewController.h */,
-				4BDE8E9620BEC452004200F3 /* RequestEscalationViewController.m */,
-				4B1785A52043D5570007E21A /* AccountInfoViewController.h */,
-				4B1785A62043D5570007E21A /* AccountInfoViewController.m */,
-				4B623EAF204525DA001B9ADE /* AccountSummaryViewController.h */,
-				4B623EB0204525DA001B9ADE /* AccountSummaryViewController.m */,
-				4B623EB52045386D001B9ADE /* OTPViewController.h */,
-				4B623EB62045386D001B9ADE /* OTPViewController.m */,
-				4B623EB820453F23001B9ADE /* RegistrationFinalViewController.h */,
-				4B623EB920453F23001B9ADE /* RegistrationFinalViewController.m */,
-				4B58D12B207F5C0F00FF5657 /* HospitalsViewController.h */,
-				4B58D12C207F5C0F00FF5657 /* HospitalsViewController.m */,
-				4B3CE6DB20C543EC001B72B0 /* FeedbackViewController.h */,
-				4B3CE6DC20C543EC001B72B0 /* FeedbackViewController.m */,
-				4B3212C421CAB4BF0013A31F /* InboxViewController.h */,
-				4B3212C521CAB4BF0013A31F /* InboxViewController.m */,
-				4B5BC48221CB755900DA36B9 /* InboxDetailViewController.h */,
-				4B5BC48321CB755900DA36B9 /* InboxDetailViewController.m */,
-				4B96FA9B21DCD149006BE806 /* PDFReaderViewController.h */,
-				4B96FA9C21DCD149006BE806 /* PDFReaderViewController.m */,
-				4B13D64F22CCEF9F00E74311 /* AboutViewController.h */,
-				4B13D65022CCEF9F00E74311 /* AboutViewController.m */,
+				2CA834D0297FD066005E530D /* Home */,
+				2CA834DB297FD285005E530D /* Videos */,
+				2C2C3A5029767EC200516352 /* Login Classes */,
+				2CA834D1297FD0F1005E530D /* Request */,
+				2CA834D5297FD167005E530D /* UserAccount */,
+				2CA834D8297FD213005E530D /* Hospitals&Department */,
+				2CA834DA297FD23E005E530D /* Promailer */,
+				2CA834D7297FD1C9005E530D /* OtherClasses */,
 				4B83A4531FE98CA200E887E9 /* Main.storyboard */,
 				4B83A47D1FE98CD300E887E9 /* iPad.storyboard */,
 				4B83A4561FE98CA200E887E9 /* Assets.xcassets */,
@@ -1257,12 +1406,12 @@
 			path = "gif images";
 			sourceTree = "<group>";
 		};
-		578874CAEDCC37DF19590A30 /* Frameworks */ = {
+		512CD9A161EB0FDB359DEB8F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				81B5BA0CC086EDA3391EFA5D /* libPods-OlympusCVM.a */,
-				6E7BA46A1AFAD85676D48CD6 /* libPods-OlympusCVMTests.a */,
-				10E6E4F7EC909287E4653F96 /* libPods-OlympusCVMUITests.a */,
+				A7A1F40661B9D5F21FB20932 /* libPods-OlympusCVM.a */,
+				9FA307733A7F898A43D992B7 /* libPods-OlympusCVMTests.a */,
+				612A728585AB2DBF574AE798 /* libPods-OlympusCVMUITests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1274,11 +1423,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4B83A4741FE98CA200E887E9 /* Build configuration list for PBXNativeTarget "OlympusCVM" */;
 			buildPhases = (
-				0FC490653DC6358C8C706F38 /* [CP] Check Pods Manifest.lock */,
+				BD4553FF0BAEB10C3A5C05BC /* [CP] Check Pods Manifest.lock */,
 				4B83A4431FE98CA100E887E9 /* Sources */,
 				4B83A4441FE98CA100E887E9 /* Frameworks */,
 				4B83A4451FE98CA100E887E9 /* Resources */,
-				C9A79579156B04F438552C40 /* [CP] Copy Pods Resources */,
+				E89BCBA477CFA612A0ED535C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1293,7 +1442,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4B83A4771FE98CA200E887E9 /* Build configuration list for PBXNativeTarget "OlympusCVMTests" */;
 			buildPhases = (
-				9B73275DF863F2A40BC5CBC3 /* [CP] Check Pods Manifest.lock */,
+				C938C1BCB2F853FB33CB4064 /* [CP] Check Pods Manifest.lock */,
 				4B83A45C1FE98CA200E887E9 /* Sources */,
 				4B83A45D1FE98CA200E887E9 /* Frameworks */,
 				4B83A45E1FE98CA200E887E9 /* Resources */,
@@ -1312,7 +1461,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4B83A47A1FE98CA200E887E9 /* Build configuration list for PBXNativeTarget "OlympusCVMUITests" */;
 			buildPhases = (
-				986C03CB40AD6829DB696A0C /* [CP] Check Pods Manifest.lock */,
+				60A81415F5427995B28B99C4 /* [CP] Check Pods Manifest.lock */,
 				4B83A4671FE98CA200E887E9 /* Sources */,
 				4B83A4681FE98CA200E887E9 /* Frameworks */,
 				4B83A4691FE98CA200E887E9 /* Resources */,
@@ -1339,6 +1488,7 @@
 					4B83A4461FE98CA100E887E9 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = K8HVGGJGBB;
+						LastSwiftMigration = 1430;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -1616,29 +1766,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0FC490653DC6358C8C706F38 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-OlympusCVM-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		986C03CB40AD6829DB696A0C /* [CP] Check Pods Manifest.lock */ = {
+		60A81415F5427995B28B99C4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1660,7 +1788,29 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9B73275DF863F2A40BC5CBC3 /* [CP] Check Pods Manifest.lock */ = {
+		BD4553FF0BAEB10C3A5C05BC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OlympusCVM-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C938C1BCB2F853FB33CB4064 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1682,7 +1832,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C9A79579156B04F438552C40 /* [CP] Copy Pods Resources */ = {
+		E89BCBA477CFA612A0ED535C /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1719,6 +1869,7 @@
 				4BED21E92006720F00287F9F /* ThankYouViewController.m in Sources */,
 				4B83A4881FEA288100E887E9 /* LoginViewController.m in Sources */,
 				4B32130221CAD0CE0013A31F /* SDWebImagePrefetcher.m in Sources */,
+				2CE201282AB88B3700C5566D /* DepartmentViewController.m in Sources */,
 				4BDE8EB120C272E2004200F3 /* ConfirmPwdViewController.m in Sources */,
 				4B3212F921CAD0CE0013A31F /* SDWebImageDecoder.m in Sources */,
 				4B32130A21CAD0CE0013A31F /* UIView+WebCache.m in Sources */,
@@ -1939,47 +2090,52 @@
 		};
 		4B83A4751FE98CA200E887E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4F23DBF429FA79DB2C38DF8D /* Pods-OlympusCVM.debug.xcconfig */;
+			baseConfigurationReference = B3C88F557C8864A36859860D /* Pods-OlympusCVM.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = OlympusCVM/OlympusCVM.entitlements;
-				CURRENT_PROJECT_VERSION = 1.0.0.4;
+				CURRENT_PROJECT_VERSION = 1.0.12;
 				DEVELOPMENT_TEAM = K8HVGGJGBB;
 				EXCLUDED_ARCHS = "";
 				INFOPLIST_FILE = OlympusCVM/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 1.20;
+				MARKETING_VERSION = 1.21;
 				PRODUCT_BUNDLE_IDENTIFIER = com.olympusindia.MyVoice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		4B83A4761FE98CA200E887E9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 93AA4F6F9E335C6F7FCA0EAF /* Pods-OlympusCVM.release.xcconfig */;
+			baseConfigurationReference = D6B3E60CAA2A31A028ACB2BD /* Pods-OlympusCVM.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = OlympusCVM/OlympusCVM.entitlements;
-				CURRENT_PROJECT_VERSION = 1.0.0.4;
+				CURRENT_PROJECT_VERSION = 1.0.12;
 				DEVELOPMENT_TEAM = K8HVGGJGBB;
 				EXCLUDED_ARCHS = "";
 				INFOPLIST_FILE = OlympusCVM/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 1.20;
+				MARKETING_VERSION = 1.21;
 				PRODUCT_BUNDLE_IDENTIFIER = com.olympusindia.MyVoice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		4B83A4781FE98CA200E887E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 31B1E6E355A6828EAA7E49EB /* Pods-OlympusCVMTests.debug.xcconfig */;
+			baseConfigurationReference = 5B07CAA3FD07F929D8BCE07F /* Pods-OlympusCVMTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 5Z8G8PCH5S;
@@ -1993,7 +2149,7 @@
 		};
 		4B83A4791FE98CA200E887E9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DE9CA605E51A14DF0081964D /* Pods-OlympusCVMTests.release.xcconfig */;
+			baseConfigurationReference = A2DFBBBBFF43FC589E0D8B90 /* Pods-OlympusCVMTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 5Z8G8PCH5S;
@@ -2007,7 +2163,7 @@
 		};
 		4B83A47B1FE98CA200E887E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 291B9F985F64CEE240CD72FB /* Pods-OlympusCVMUITests.debug.xcconfig */;
+			baseConfigurationReference = 148CA1E2CC02CF82DAD25FF6 /* Pods-OlympusCVMUITests.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 5Z8G8PCH5S;
 				INFOPLIST_FILE = OlympusCVMUITests/Info.plist;
@@ -2020,7 +2176,7 @@
 		};
 		4B83A47C1FE98CA200E887E9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 60F4464BBE538F5110BF5AA3 /* Pods-OlympusCVMUITests.release.xcconfig */;
+			baseConfigurationReference = F788F74DE62203681669EF06 /* Pods-OlympusCVMUITests.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 5Z8G8PCH5S;
 				INFOPLIST_FILE = OlympusCVMUITests/Info.plist;

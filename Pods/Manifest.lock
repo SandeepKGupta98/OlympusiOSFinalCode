@@ -76,7 +76,7 @@ PODS:
   - nanopb/decode (1.30906.0)
   - nanopb/encode (1.30906.0)
   - PromisesObjC (1.2.12)
-  - Protobuf (3.19.4)
+  - Protobuf (3.21.12)
   - youtube-ios-player-helper (0.1.6)
 
 DEPENDENCIES:
@@ -114,9 +114,9 @@ SPEC CHECKSUMS:
   GoogleUtilities: 7f2f5a07f888cdb145101d6042bc4422f57e70b3
   nanopb: 59317e09cf1f1a0af72f12af412d54edf52603fc
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
-  Protobuf: 235750e4696ff59fb07d949a9dbbc92b3c0700fe
+  Protobuf: 120350fc38646e2dedc26f49ecba778184ea1de2
   youtube-ios-player-helper: 21ab92db027c7ff86cb17a3843a3f6eafc8158d2
 
 PODFILE CHECKSUM: bac149b97f3d7ffe12374b4f1ed3942d187c6e3d
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.12.1
